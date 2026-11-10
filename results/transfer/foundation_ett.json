@@ -1,0 +1,58 @@
+{
+ "n_test_points": 712,
+ "context": 512,
+ "horizons": [
+  1,
+  24
+ ],
+ "models": {
+  "naive-last-value": {
+   "model": "last value",
+   "n_params": 0,
+   "mae_h1": 0.7953496853287301,
+   "mae_h24": 1.8521474414829457
+  },
+  "seasonal-naive-24h": {
+   "model": "same hour yesterday",
+   "n_params": 0,
+   "mae_h1": 1.8154733045382445,
+   "mae_h24": 1.796028053994929
+  },
+  "chronos-bolt-tiny": {
+   "model": "amazon/chronos-bolt-tiny",
+   "n_params": 8652672,
+   "mae_h1": 0.7868952136696055,
+   "mae_h24": 1.9204627440384265,
+   "gpu_batched_ms_per_forecast": 0.767276528176297,
+   "cpu_1thread_ms_per_forecast": 15.584969520568848,
+   "load_s": 0.9918270111083984
+  },
+  "chronos-bolt-small": {
+   "model": "amazon/chronos-bolt-small",
+   "n_params": 47718016,
+   "mae_h1": 0.778206548161721,
+   "mae_h24": 1.9385032142313678,
+   "gpu_batched_ms_per_forecast": 0.3214957339040349,
+   "cpu_1thread_ms_per_forecast": 54.46765422821045,
+   "load_s": 0.8136680126190186
+  },
+  "ttm": {
+   "model": "ibm-granite/granite-timeseries-ttm-r2 (512-96)",
+   "n_params": 805280,
+   "mae_h1": 0.8098249105590115,
+   "mae_h24": 2.0302308430330136,
+   "gpu_batched_ms_per_forecast": 0.06837489899624599,
+   "cpu_1thread_ms_per_forecast": 2.8804779052734375,
+   "load_s": 2.0941498279571533
+  },
+  "timesfm": {
+   "model": "google/timesfm-2.5-200m-pytorch",
+   "n_params": 231289280,
+   "mae_h1": 0.75462069153116,
+   "mae_h24": 1.9114789317330618,
+   "gpu_batched_ms_per_forecast": 92.94541632191519,
+   "single_forecast_ms_same_backend": 97.46392567952473,
+   "load_s": 6.1755077838897705
+  }
+ }
+}

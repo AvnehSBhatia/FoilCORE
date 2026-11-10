@@ -1,0 +1,244 @@
+{
+ "ckpt": "results/pod_runs/20260819_001018_v80/foilcore_epoch_100.pt",
+ "n_params": 5822,
+ "param_breakdown": {
+  "path": 416,
+  "geom_encoder": 96,
+  "mem_mix": 416,
+  "head": 66,
+  "profile_in": 672,
+  "polar_in": 192,
+  "bb_in": 462,
+  "backbone": 3472,
+  "bb_head": 30
+ },
+ "config": {
+  "d_model": 32,
+  "d_geom": 32,
+  "model_type": "seqbaseline",
+  "num_blocks": 2,
+  "block_mode": "all_alt",
+  "shared_qk_scalars": true,
+  "path_mode": "full",
+  "share_path": true,
+  "n_path_terms": 4,
+  "outer_layers": 0,
+  "dropout": 0.05,
+  "residual": true,
+  "use_causal_mask": false,
+  "decoder_hidden": 0,
+  "output_dims": 2,
+  "mlp_hidden": 32,
+  "n_heads": 2,
+  "le_xmax": 0.25,
+  "te_xmin": 0.75,
+  "draft_loss_weight": 0.25,
+  "n_geom_memories": 3,
+  "n_landmarks": 4,
+  "contour_bidirectional": true,
+  "contour_d_cond": 3,
+  "contour_log_a_init": "const",
+  "contour_mode": "ssm",
+  "directional_landmarks": false,
+  "landmark_mean": false,
+  "mem_log_a_init": -0.5,
+  "polar_mixer": "iir_clcd",
+  "iir_tau_init": "const",
+  "polar_in_clcd": true,
+  "polar_alpha_sinus": true,
+  "err_head_hidden": 16,
+  "err_head_mem_dim": 4,
+  "router_threshold": 0.5,
+  "use_stall_router": true,
+  "use_selective_ssm": true,
+  "use_local_kernel": true,
+  "use_err_head": false,
+  "profile_stations": 10,
+  "moe_experts": 0,
+  "geom_pool": "region3",
+  "softbin_k": 4,
+  "use_err_expert": false,
+  "err_expert_hidden": 16,
+  "seq_backbone": "transformer",
+  "bb_d": 14,
+  "bb_layers": 2,
+  "bb_t_max": 96,
+  "bb_inner": 24,
+  "bb_state": 8
+ },
+ "accuracy": {
+  "n_rows": 34043,
+  "n_points": 2427544,
+  "ar": {
+   "cl": 0.055866289883852005,
+   "cd": 0.0043060448952019215,
+   "stall_cl": 0.06113015487790108,
+   "stall_cd": 0.0068966299295425415,
+   "linear_cl": 0.052797831594944,
+   "linear_cd": 0.0027959197759628296
+  },
+  "tf": {
+   "cl": 0.0555914044380188,
+   "cd": 0.004235237371176481,
+   "stall_cl": 0.06074667349457741,
+   "stall_cd": 0.0068440912291407585,
+   "linear_cl": 0.05258623883128166,
+   "linear_cd": 0.002714462112635374
+  },
+  "seeded1": {
+   "cl": 0.055866289883852005,
+   "cd": 0.0043060448952019215,
+   "stall_cl": 0.06113015487790108,
+   "stall_cd": 0.0068966299295425415,
+   "linear_cl": 0.052797831594944,
+   "linear_cd": 0.0027959197759628296
+  },
+  "draft": {
+   "cl": 0.09969906508922577,
+   "cd": 0.01291015837341547
+  },
+  "ar_by_alpha": [
+   {
+    "lo": -20.0,
+    "hi": -12.0,
+    "n": 380602,
+    "cl": 0.06506107747554779,
+    "cd": 0.007236042059957981
+   },
+   {
+    "lo": -12.0,
+    "hi": -6.0,
+    "n": 419212,
+    "cl": 0.05806861072778702,
+    "cd": 0.004258846864104271
+   },
+   {
+    "lo": -6.0,
+    "hi": 0.0,
+    "n": 392415,
+    "cl": 0.044467583298683167,
+    "cd": 0.0019746862817555666
+   },
+   {
+    "lo": 0.0,
+    "hi": 6.0,
+    "n": 359950,
+    "cl": 0.054298579692840576,
+    "cd": 0.001784641994163394
+   },
+   {
+    "lo": 6.0,
+    "hi": 12.0,
+    "n": 392893,
+    "cl": 0.054855674505233765,
+    "cd": 0.003185048932209611
+   },
+   {
+    "lo": 12.0,
+    "hi": 20.1,
+    "n": 463413,
+    "cl": 0.056892964988946915,
+    "cd": 0.006544164381921291
+   }
+  ],
+  "ar_by_re": [
+   {
+    "lo": 40000.0,
+    "hi": 100000.0,
+    "n": 111586,
+    "cl": 0.10428775101900101,
+    "cd": 0.010159317404031754
+   },
+   {
+    "lo": 100000.0,
+    "hi": 300000.0,
+    "n": 223263,
+    "cl": 0.08105555176734924,
+    "cd": 0.008090322837233543
+   },
+   {
+    "lo": 300000.0,
+    "hi": 1000000.0,
+    "n": 379132,
+    "cl": 0.052662841975688934,
+    "cd": 0.005223284941166639
+   },
+   {
+    "lo": 1000000.0,
+    "hi": 3000000.0,
+    "n": 261203,
+    "cl": 0.0522787906229496,
+    "cd": 0.004195082932710648
+   },
+   {
+    "lo": 3000000.0,
+    "hi": 21000000.0,
+    "n": 1452360,
+    "cl": 0.0497552752494812,
+    "cd": 0.003055113134905696
+   }
+  ],
+  "ar_by_mach": [
+   {
+    "lo": -0.01,
+    "hi": 0.05,
+    "n": 636250,
+    "cl": 0.05135904252529144,
+    "cd": 0.003517569275572896
+   },
+   {
+    "lo": 0.05,
+    "hi": 0.15,
+    "n": 629490,
+    "cl": 0.05279253050684929,
+    "cd": 0.003740915097296238
+   },
+   {
+    "lo": 0.15,
+    "hi": 0.3,
+    "n": 616820,
+    "cl": 0.058510929346084595,
+    "cd": 0.004757502116262913
+   },
+   {
+    "lo": 0.3,
+    "hi": 0.51,
+    "n": 544984,
+    "cl": 0.061685483902692795,
+    "cd": 0.00536835752427578
+   }
+  ]
+ },
+ "latency": {
+  "cpu_b1_1thread_ms": {
+   "median": 0.9930829983204603,
+   "p90": 1.6214087372645736
+  },
+  "fused_cpp_b1_us": {
+   "error": "unsupported config"
+  },
+  "cpu_batched_us_per_polar": {
+   "bs": 256,
+   "us": 142.18229980542674
+  },
+  "mps_batched_us_per_polar": {
+   "bs": 1024,
+   "us": 32.481416792506934
+  }
+ },
+ "train": {
+  "epoch": 100,
+  "val_causal": {
+   "loss": 0.22607054955819073,
+   "cl": 0.0556609220802784,
+   "cd": 0.004408631473779678,
+   "stall_cl": 0.06085125356912613,
+   "stall_cd": 0.007092200685292482
+  },
+  "variant": {
+   "id": 80,
+   "slug": "seq_transformer",
+   "name": "Baseline: FoilCORE front-end + 2-layer pre-LN Transformer encoder (PatchTST, patch length 1)"
+  }
+ }
+}

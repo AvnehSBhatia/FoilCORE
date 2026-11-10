@@ -1,0 +1,249 @@
+{
+ "ckpt": "checkpoints/avneh_v61_ours_seed1/foilcore_best.pt",
+ "n_params": 5285,
+ "param_breakdown": {
+  "path": 416,
+  "geom_encoder": 96,
+  "mem_mix": 416,
+  "head": 66,
+  "err_head": 518,
+  "polar_in": 256,
+  "profile_in": 672,
+  "err_expert": 597,
+  "agent": 2248
+ },
+ "config": {
+  "d_model": 32,
+  "d_geom": 32,
+  "model_type": "foilcore",
+  "num_blocks": 2,
+  "block_mode": "all_alt",
+  "shared_qk_scalars": true,
+  "path_mode": "full",
+  "share_path": true,
+  "n_path_terms": 4,
+  "outer_layers": 0,
+  "dropout": 0.05,
+  "residual": true,
+  "use_causal_mask": false,
+  "phys_residual": false,
+  "phys_residual_gated": false,
+  "phys_base": false,
+  "invariant_memory": false,
+  "bl_features": false,
+  "cl_mu": 0.0,
+  "cl_sd": 1.0,
+  "cd_mu": 0.0,
+  "cd_sd": 1.0,
+  "a_mu": 0.0,
+  "a_sd": 1.0,
+  "m_mu": 0.0,
+  "m_sd": 1.0,
+  "re_mu": 0.0,
+  "re_sd": 1.0,
+  "decoder_hidden": 0,
+  "output_dims": 2,
+  "mlp_hidden": 32,
+  "n_heads": 2,
+  "le_xmax": 0.25,
+  "te_xmin": 0.75,
+  "draft_loss_weight": 0.25,
+  "n_geom_memories": 3,
+  "n_landmarks": 4,
+  "contour_bidirectional": true,
+  "contour_d_cond": 3,
+  "contour_log_a_init": "const",
+  "contour_mode": "ssm",
+  "directional_landmarks": false,
+  "landmark_mean": false,
+  "mem_log_a_init": -0.5,
+  "polar_mixer": "iir_clcd",
+  "iir_tau_init": "const",
+  "polar_in_clcd": true,
+  "polar_alpha_sinus": true,
+  "err_head_hidden": 16,
+  "err_head_mem_dim": 4,
+  "router_threshold": 0.5,
+  "use_stall_router": true,
+  "use_selective_ssm": true,
+  "use_local_kernel": true,
+  "use_err_head": true,
+  "profile_stations": 10,
+  "moe_experts": 0,
+  "geom_pool": "region3",
+  "softbin_k": 4,
+  "use_err_expert": true,
+  "err_expert_hidden": 16
+ },
+ "accuracy": {
+  "n_rows": 4096,
+  "n_points": 275747,
+  "ar": {
+   "cl": 0.04629191756248474,
+   "cd": 0.00374470348469913,
+   "stall_cl": 0.054299015551805496,
+   "stall_cd": 0.006479315459728241,
+   "linear_cl": 0.041745737195014954,
+   "linear_cd": 0.002192076528444886
+  },
+  "tf": {
+   "cl": 0.04624151065945625,
+   "cd": 0.0037380524445325136,
+   "stall_cl": 0.05383538082242012,
+   "stall_cd": 0.006437565665692091,
+   "linear_cl": 0.0419299490749836,
+   "linear_cd": 0.002205352997407317
+  },
+  "seeded1": {
+   "cl": 0.04835895448923111,
+   "cd": 0.004433378577232361,
+   "stall_cl": 0.05959092825651169,
+   "stall_cd": 0.008175432682037354,
+   "linear_cl": 0.04198179021477699,
+   "linear_cd": 0.0023087584413588047
+  },
+  "draft": {
+   "cl": 0.09731924533843994,
+   "cd": 0.012095308862626553
+  },
+  "ar_by_alpha": [
+   {
+    "lo": -20.0,
+    "hi": -12.0,
+    "n": 42109,
+    "cl": 0.06046946346759796,
+    "cd": 0.007339392323046923
+   },
+   {
+    "lo": -12.0,
+    "hi": -6.0,
+    "n": 42735,
+    "cl": 0.04619472101330757,
+    "cd": 0.003821586025878787
+   },
+   {
+    "lo": -6.0,
+    "hi": 0.0,
+    "n": 44399,
+    "cl": 0.03670480102300644,
+    "cd": 0.0016438011080026627
+   },
+   {
+    "lo": 0.0,
+    "hi": 6.0,
+    "n": 46489,
+    "cl": 0.04185829311609268,
+    "cd": 0.0013018279569223523
+   },
+   {
+    "lo": 6.0,
+    "hi": 12.0,
+    "n": 45665,
+    "cl": 0.04312876611948013,
+    "cd": 0.0023296691942960024
+   },
+   {
+    "lo": 12.0,
+    "hi": 20.1,
+    "n": 52232,
+    "cl": 0.04842861369252205,
+    "cd": 0.00567989656701684
+   }
+  ],
+  "ar_by_re": [
+   {
+    "lo": 40000.0,
+    "hi": 100000.0,
+    "n": 13600,
+    "cl": 0.09023415297269821,
+    "cd": 0.008439652621746063
+   },
+   {
+    "lo": 100000.0,
+    "hi": 300000.0,
+    "n": 27651,
+    "cl": 0.06566876173019409,
+    "cd": 0.005784348584711552
+   },
+   {
+    "lo": 300000.0,
+    "hi": 1000000.0,
+    "n": 29692,
+    "cl": 0.046898212283849716,
+    "cd": 0.004433050286024809
+   },
+   {
+    "lo": 1000000.0,
+    "hi": 3000000.0,
+    "n": 30041,
+    "cl": 0.0439891442656517,
+    "cd": 0.004187540151178837
+   },
+   {
+    "lo": 3000000.0,
+    "hi": 21000000.0,
+    "n": 174763,
+    "cl": 0.0400993749499321,
+    "cd": 0.0028635605704039335
+   }
+  ],
+  "ar_by_mach": [
+   {
+    "lo": -0.01,
+    "hi": 0.05,
+    "n": 74314,
+    "cl": 0.0424768440425396,
+    "cd": 0.0032856930047273636
+   },
+   {
+    "lo": 0.05,
+    "hi": 0.15,
+    "n": 72648,
+    "cl": 0.04250345006585121,
+    "cd": 0.0033317329362034798
+   },
+   {
+    "lo": 0.15,
+    "hi": 0.3,
+    "n": 68236,
+    "cl": 0.049748923629522324,
+    "cd": 0.004407074302434921
+   },
+   {
+    "lo": 0.3,
+    "hi": 0.51,
+    "n": 60549,
+    "cl": 0.05162389576435089,
+    "cd": 0.004057092126458883
+   }
+  ]
+ },
+ "latency": {
+  "cpu_b1_1thread_ms": {
+   "median": 2.9082223773002625,
+   "p90": 2.953298296779394
+  },
+  "fused_cpp_b1_us": {
+   "error": "/home/skapoor/FoilCORE/build/fused_forward/foilcore_fused_forward.so: cannot open shared object file: No such file or directory"
+  },
+  "cpu_batched_us_per_polar": {
+   "bs": 512,
+   "us": 896.6195450739178
+  }
+ },
+ "train": {
+  "epoch": 301,
+  "val_causal": {
+   "loss": 0.22346359325779808,
+   "cl": 0.04725630208849907,
+   "cd": 0.0038675672840327024,
+   "stall_cl": 0.054882634431123734,
+   "stall_cd": 0.006597687024623156
+  },
+  "variant": {
+   "id": 61,
+   "slug": "ref_ar_eqw_errhead_profile_expert",
+   "name": "FoilCORE + error head + profile memory + \u00ea-gated residual expert"
+  }
+ }
+}

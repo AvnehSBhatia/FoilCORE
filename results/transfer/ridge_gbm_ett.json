@@ -1,0 +1,20 @@
+{
+ "ett": {
+  "name": "ETTh1 oil temperature",
+  "n_train_points": 112128,
+  "n_test_points": 12000,
+  "test_mae_degC": {
+   "ridge": 5.81710147857666,
+   "hist_gbm": 5.873420023808635
+  }
+ },
+ "ett_lag1": {
+  "name": "ETTh1 oil temperature (+OT lag 1)",
+  "n_train_points": 112128,
+  "n_test_points": 11904,
+  "test_mae_degC": {
+   "ridge": 0.646811842918396,
+   "hist_gbm": 0.9086309185548532
+  }
+ }
+}

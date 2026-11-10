@@ -1,0 +1,246 @@
+{
+ "ckpt": "results/pod_runs/20260819_001018_v81/foilcore_best.pt",
+ "n_params": 11780,
+ "param_breakdown": {
+  "path": 416,
+  "geom_encoder": 96,
+  "mem_mix": 416,
+  "head": 66,
+  "profile_in": 672,
+  "polar_in": 192,
+  "bb_in": 264,
+  "backbone": 9640,
+  "bb_head": 18
+ },
+ "config": {
+  "d_model": 32,
+  "d_geom": 32,
+  "model_type": "seqbaseline",
+  "num_blocks": 2,
+  "block_mode": "all_alt",
+  "shared_qk_scalars": true,
+  "path_mode": "full",
+  "share_path": true,
+  "n_path_terms": 4,
+  "outer_layers": 0,
+  "dropout": 0.05,
+  "residual": true,
+  "use_causal_mask": false,
+  "decoder_hidden": 0,
+  "output_dims": 2,
+  "mlp_hidden": 32,
+  "n_heads": 2,
+  "le_xmax": 0.25,
+  "te_xmin": 0.75,
+  "draft_loss_weight": 0.25,
+  "n_geom_memories": 3,
+  "n_landmarks": 4,
+  "contour_bidirectional": true,
+  "contour_d_cond": 3,
+  "contour_log_a_init": "const",
+  "contour_mode": "ssm",
+  "directional_landmarks": false,
+  "landmark_mean": false,
+  "mem_log_a_init": -0.5,
+  "polar_mixer": "iir_clcd",
+  "iir_tau_init": "const",
+  "polar_in_clcd": true,
+  "polar_alpha_sinus": true,
+  "err_head_hidden": 16,
+  "err_head_mem_dim": 4,
+  "router_threshold": 0.5,
+  "use_stall_router": true,
+  "use_selective_ssm": true,
+  "use_local_kernel": true,
+  "use_err_head": false,
+  "profile_stations": 10,
+  "moe_experts": 0,
+  "geom_pool": "region3",
+  "softbin_k": 4,
+  "use_err_expert": false,
+  "err_expert_hidden": 16,
+  "seq_backbone": "tsmixer",
+  "bb_d": 8,
+  "bb_layers": 1,
+  "bb_t_max": 96,
+  "bb_inner": 24,
+  "bb_state": 8
+ },
+ "accuracy": {
+  "n_rows": 34043,
+  "n_points": 2427544,
+  "ar": {
+   "cl": 0.06105795502662659,
+   "cd": 0.004582439549267292,
+   "stall_cl": 0.06871919333934784,
+   "stall_cd": 0.007502113934606314,
+   "linear_cl": 0.056592002511024475,
+   "linear_cd": 0.0028804787434637547
+  },
+  "tf": {
+   "cl": 0.060542888939380646,
+   "cd": 0.004499450791627169,
+   "stall_cl": 0.06792854517698288,
+   "stall_cd": 0.00734383799135685,
+   "linear_cl": 0.056237585842609406,
+   "linear_cd": 0.002841377165168524
+  },
+  "seeded1": {
+   "cl": 0.06105795502662659,
+   "cd": 0.004582439549267292,
+   "stall_cl": 0.06871919333934784,
+   "stall_cd": 0.007502113934606314,
+   "linear_cl": 0.056592002511024475,
+   "linear_cd": 0.0028804787434637547
+  },
+  "draft": {
+   "cl": 0.094207763671875,
+   "cd": 0.011674796231091022
+  },
+  "ar_by_alpha": [
+   {
+    "lo": -20.0,
+    "hi": -12.0,
+    "n": 380602,
+    "cl": 0.06888321787118912,
+    "cd": 0.007407530210912228
+   },
+   {
+    "lo": -12.0,
+    "hi": -6.0,
+    "n": 419212,
+    "cl": 0.058129843324422836,
+    "cd": 0.004205294884741306
+   },
+   {
+    "lo": -6.0,
+    "hi": 0.0,
+    "n": 392415,
+    "cl": 0.045778196305036545,
+    "cd": 0.00197588955052197
+   },
+   {
+    "lo": 0.0,
+    "hi": 6.0,
+    "n": 359950,
+    "cl": 0.058933623135089874,
+    "cd": 0.00188032619189471
+   },
+   {
+    "lo": 6.0,
+    "hi": 12.0,
+    "n": 392893,
+    "cl": 0.0640745759010315,
+    "cd": 0.003473761025816202
+   },
+   {
+    "lo": 12.0,
+    "hi": 20.1,
+    "n": 463413,
+    "cl": 0.06802565604448318,
+    "cd": 0.007536572869867086
+   }
+  ],
+  "ar_by_re": [
+   {
+    "lo": 40000.0,
+    "hi": 100000.0,
+    "n": 111586,
+    "cl": 0.1202283501625061,
+    "cd": 0.01152981910854578
+   },
+   {
+    "lo": 100000.0,
+    "hi": 300000.0,
+    "n": 223263,
+    "cl": 0.09112424403429031,
+    "cd": 0.008008953183889389
+   },
+   {
+    "lo": 300000.0,
+    "hi": 1000000.0,
+    "n": 379132,
+    "cl": 0.05634624511003494,
+    "cd": 0.005372102838009596
+   },
+   {
+    "lo": 1000000.0,
+    "hi": 3000000.0,
+    "n": 261203,
+    "cl": 0.05677811801433563,
+    "cd": 0.0046289353631436825
+   },
+   {
+    "lo": 3000000.0,
+    "hi": 21000000.0,
+    "n": 1452360,
+    "cl": 0.05388961732387543,
+    "cd": 0.003307427978143096
+   }
+  ],
+  "ar_by_mach": [
+   {
+    "lo": -0.01,
+    "hi": 0.05,
+    "n": 636250,
+    "cl": 0.05429826304316521,
+    "cd": 0.0038620864506810904
+   },
+   {
+    "lo": 0.05,
+    "hi": 0.15,
+    "n": 629490,
+    "cl": 0.05578300356864929,
+    "cd": 0.004070378839969635
+   },
+   {
+    "lo": 0.15,
+    "hi": 0.3,
+    "n": 616820,
+    "cl": 0.0665263757109642,
+    "cd": 0.005165542010217905
+   },
+   {
+    "lo": 0.3,
+    "hi": 0.51,
+    "n": 544984,
+    "cl": 0.06885332614183426,
+    "cd": 0.005354926455765963
+   }
+  ]
+ },
+ "latency": {
+  "cpu_b1_1thread_ms": {
+   "median": 0.853583449497819,
+   "p90": 0.9319334756582975
+  },
+  "fused_cpp_b1_us": {
+   "full_median": 49.958936870098114,
+   "geom_cached_median": 32.00001083314419,
+   "max_abs_diff_vs_torch": 2.86102294921875e-06
+  },
+  "cpu_batched_us_per_polar": {
+   "bs": 256,
+   "us": 96.12452790861425
+  },
+  "mps_batched_us_per_polar": {
+   "bs": 512,
+   "us": 28.532604983411147
+  }
+ },
+ "train": {
+  "epoch": 231,
+  "val_causal": {
+   "loss": 0.23071706623715513,
+   "cl": 0.061235010623931885,
+   "cd": 0.004680944606661797,
+   "stall_cl": 0.06877721846103668,
+   "stall_cd": 0.007607484236359596
+  },
+  "variant": {
+   "id": 81,
+   "slug": "seq_tsmixer",
+   "name": "Baseline: FoilCORE front-end + TSMixer / TinyTimeMixer-style time-mixing MLP (T_max=96)"
+  }
+ }
+}

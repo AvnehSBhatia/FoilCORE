@@ -1,0 +1,25 @@
+[fast_train] device cuda  variant 53
+[fast_train] FoilCORE v2, equal-weight z-scored loss (Cl 1 : Cd 1) [foilcore2_eqw]
+[fast_train] loaded tensor cache train_tensors_a7e83aef8d.pt: 272748 rows, T_max=81
+[fast_train] loaded tensor cache val_tensors_3882da134e.pt: 34344 rows, T_max=81
+[fast_train] loaded 2 geom encoder tensors
+[fast_train] loaded 7 PathNonlinearity tensors
+[fast_train] 3054 params  bs=1024  lr=0.0003  compile=True  bf16=False
+[fast_train] resumed 52 tensors from runs/20260818_023002_v53/foilcore_epoch_100.pt (epoch 100)
+[fast_train] appended to 100 epochs of history
+W0818 04:48:15.529000 43152 torch/_inductor/utils.py:1436] [10/1_1] Not enough SMs to use max_autotune_gemm mode
+Epoch 101/400 | 162s+17s | train L 0.3493 (Cl 0.0977 Cd 0.1207) err=0.2598 gate=0.0019 | val AR L 0.3514 Cl 0.0910 Cd 0.00669 stallCd 0.01109 | TF Cl 0.0924 Cd 0.00670 | lr 3.00e-04
+Epoch 102/400 | 62s+17s | train L 0.3479 (Cl 0.0972 Cd 0.1201) err=0.2594 gate=0.0019 | val AR L 0.3495 Cl 0.0904 Cd 0.00665 stallCd 0.01104 | TF Cl 0.0916 Cd 0.00663 | lr 3.00e-04
+Epoch 103/400 | 61s+16s | train L 0.3465 (Cl 0.0966 Cd 0.1195) err=0.2594 gate=0.0020 | val AR L 0.3487 Cl 0.0900 Cd 0.00666 stallCd 0.01106 | TF Cl 0.0913 Cd 0.00667 | lr 3.00e-04
+Epoch 104/400 | 55s+16s | train L 0.3454 (Cl 0.0962 Cd 0.1190) err=0.2588 gate=0.0020 | val AR L 0.3473 Cl 0.0895 Cd 0.00661 stallCd 0.01098 | TF Cl 0.0909 Cd 0.00663 | lr 3.00e-04
+Epoch 105/400 | 64s+17s | train L 0.3445 (Cl 0.0958 Cd 0.1188) err=0.2584 gate=0.0021 | val AR L 0.3460 Cl 0.0893 Cd 0.00656 stallCd 0.01088 | TF Cl 0.0908 Cd 0.00661 | lr 3.00e-04
+Epoch 106/400 | 76s+24s | train L 0.3435 (Cl 0.0953 Cd 0.1184) err=0.2583 gate=0.0021 | val AR L 0.3452 Cl 0.0885 Cd 0.00658 stallCd 0.01089 | TF Cl 0.0902 Cd 0.00663 | lr 3.00e-04
+Epoch 107/400 | 85s+23s | train L 0.3423 (Cl 0.0950 Cd 0.1179) err=0.2577 gate=0.0021 | val AR L 0.3439 Cl 0.0881 Cd 0.00654 stallCd 0.01086 | TF Cl 0.0895 Cd 0.00656 | lr 3.00e-04
+Epoch 108/400 | 84s+23s | train L 0.3409 (Cl 0.0944 Cd 0.1172) err=0.2576 gate=0.0022 | val AR L 0.3439 Cl 0.0880 Cd 0.00657 stallCd 0.01085 | TF Cl 0.0896 Cd 0.00664 | lr 3.00e-04
+Epoch 109/400 | 85s+23s | train L 0.3401 (Cl 0.0941 Cd 0.1170) err=0.2570 gate=0.0023 | val AR L 0.3414 Cl 0.0872 Cd 0.00648 stallCd 0.01072 | TF Cl 0.0885 Cd 0.00649 | lr 3.00e-04
+Epoch 110/400 | 84s+23s | train L 0.3390 (Cl 0.0937 Cd 0.1164) err=0.2569 gate=0.0024 | val AR L 0.3401 Cl 0.0869 Cd 0.00644 stallCd 0.01068 | TF Cl 0.0885 Cd 0.00648 | lr 3.00e-04
+Epoch 111/400 | 85s+23s | train L 0.3380 (Cl 0.0934 Cd 0.1160) err=0.2566 gate=0.0025 | val AR L 0.3401 Cl 0.0868 Cd 0.00646 stallCd 0.01073 | TF Cl 0.0876 Cd 0.00647 | lr 3.00e-04
+Epoch 112/400 | 85s+23s | train L 0.3370 (Cl 0.0932 Cd 0.1155) err=0.2561 gate=0.0026 | val AR L 0.3389 Cl 0.0865 Cd 0.00642 stallCd 0.01062 | TF Cl 0.0881 Cd 0.00644 | lr 3.00e-04
+Epoch 113/400 | 84s+24s | train L 0.3363 (Cl 0.0928 Cd 0.1154) err=0.2557 gate=0.0027 | val AR L 0.3381 Cl 0.0861 Cd 0.00640 stallCd 0.01060 | TF Cl 0.0874 Cd 0.00644 | lr 3.00e-04
+Epoch 114/400 | 84s+23s | train L 0.3352 (Cl 0.0924 Cd 0.1148) err=0.2555 gate=0.0026 | val AR L 0.3383 Cl 0.0858 Cd 0.00646 stallCd 0.01068 | TF Cl 0.0872 Cd 0.00649 | lr 3.00e-04
+Epoch 115/400 | 84s+23s | train L 0.3346 (Cl 0.0921 Cd 0.1147) err=0.2551 gate=0.0026 | val AR L 0.3368 Cl 0.0863 Cd 0.00635 stallCd 0.01052 | TF Cl 0.0875 Cd 0.00638 | lr 3.00e-04

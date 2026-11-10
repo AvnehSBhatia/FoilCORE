@@ -1,0 +1,32 @@
+{
+ "v80": {
+  "seq_backbone": "transformer",
+  "n_params": 5822,
+  "T": 68,
+  "max_abs_diff_causal": 2.86102294921875e-06,
+  "max_abs_diff_bidir": 3.814697265625e-06,
+  "eager_ms": 0.6637920159846544,
+  "fused_full_us": 166.12489707767963,
+  "fused_cached_us": 131.6874986514449
+ },
+ "v81": {
+  "seq_backbone": "tsmixer",
+  "n_params": 11780,
+  "T": 68,
+  "max_abs_diff_causal": 2.86102294921875e-06,
+  "max_abs_diff_bidir": 3.814697265625e-06,
+  "eager_ms": 0.5114584928378463,
+  "fused_full_us": 49.958936870098114,
+  "fused_cached_us": 32.00001083314419
+ },
+ "v82": {
+  "seq_backbone": "mamba",
+  "n_params": 5300,
+  "T": 68,
+  "max_abs_diff_causal": 1.9073486328125e-06,
+  "max_abs_diff_bidir": 1.430511474609375e-06,
+  "eager_ms": 0.8678331505507231,
+  "fused_full_us": 121.6039527207613,
+  "fused_cached_us": 103.52092795073986
+ }
+}

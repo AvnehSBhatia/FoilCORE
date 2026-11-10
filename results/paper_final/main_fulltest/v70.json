@@ -1,0 +1,237 @@
+{
+ "ckpt": "checkpoints/v70/foilcore_best.pt",
+ "n_params": 482,
+ "param_breakdown": {
+  "path": 104,
+  "geom_encoder": 24,
+  "mem_mix": 104,
+  "head": 18,
+  "polar_in": 48,
+  "agent": 184
+ },
+ "config": {
+  "d_model": 8,
+  "d_geom": 8,
+  "model_type": "foilcore",
+  "num_blocks": 2,
+  "block_mode": "all_alt",
+  "shared_qk_scalars": true,
+  "path_mode": "full",
+  "share_path": true,
+  "n_path_terms": 4,
+  "outer_layers": 0,
+  "dropout": 0.05,
+  "residual": true,
+  "use_causal_mask": false,
+  "decoder_hidden": 0,
+  "output_dims": 2,
+  "mlp_hidden": 8,
+  "n_heads": 2,
+  "le_xmax": 0.25,
+  "te_xmin": 0.75,
+  "draft_loss_weight": 0.25,
+  "n_geom_memories": 3,
+  "n_landmarks": 4,
+  "contour_bidirectional": true,
+  "contour_d_cond": 3,
+  "contour_log_a_init": "const",
+  "contour_mode": "ssm",
+  "directional_landmarks": false,
+  "landmark_mean": false,
+  "mem_log_a_init": -0.5,
+  "polar_mixer": "iir_clcd",
+  "iir_tau_init": "const",
+  "polar_in_clcd": true,
+  "polar_alpha_sinus": true,
+  "err_head_hidden": 16,
+  "err_head_mem_dim": 4,
+  "router_threshold": 0.5,
+  "use_stall_router": true,
+  "use_selective_ssm": true,
+  "use_local_kernel": true,
+  "use_err_head": false,
+  "profile_stations": 0,
+  "moe_experts": 0,
+  "geom_pool": "region3",
+  "softbin_k": 4,
+  "use_err_expert": false,
+  "err_expert_hidden": 16
+ },
+ "accuracy": {
+  "n_rows": 34043,
+  "n_points": 2427544,
+  "ar": {
+   "cl": 0.10008742660284042,
+   "cd": 0.00831514410674572,
+   "stall_cl": 0.11497906595468521,
+   "stall_cd": 0.012855703011155128,
+   "linear_cl": 0.0914066880941391,
+   "linear_cd": 0.005668323487043381
+  },
+  "tf": {
+   "cl": 0.10031990706920624,
+   "cd": 0.008375845849514008,
+   "stall_cl": 0.11528810113668442,
+   "stall_cd": 0.012980985455214977,
+   "linear_cl": 0.09159453213214874,
+   "linear_cd": 0.005691379774361849
+  },
+  "seeded1": {
+   "cl": 0.1014694944024086,
+   "cd": 0.008366943337023258,
+   "stall_cl": 0.11853200942277908,
+   "stall_cd": 0.013077040202915668,
+   "linear_cl": 0.09152327477931976,
+   "linear_cd": 0.005621294490993023
+  },
+  "draft": {
+   "cl": 0.1258315145969391,
+   "cd": 0.014561653137207031
+  },
+  "ar_by_alpha": [
+   {
+    "lo": -20.0,
+    "hi": -12.0,
+    "n": 380602,
+    "cl": 0.1072576493024826,
+    "cd": 0.012813248671591282
+   },
+   {
+    "lo": -12.0,
+    "hi": -6.0,
+    "n": 419212,
+    "cl": 0.08326610177755356,
+    "cd": 0.007907792925834656
+   },
+   {
+    "lo": -6.0,
+    "hi": 0.0,
+    "n": 392415,
+    "cl": 0.08373850584030151,
+    "cd": 0.0040312400087714195
+   },
+   {
+    "lo": 0.0,
+    "hi": 6.0,
+    "n": 359950,
+    "cl": 0.0926252156496048,
+    "cd": 0.004495907574892044
+   },
+   {
+    "lo": 6.0,
+    "hi": 12.0,
+    "n": 392893,
+    "cl": 0.10680291056632996,
+    "cd": 0.006361727602779865
+   },
+   {
+    "lo": 12.0,
+    "hi": 20.1,
+    "n": 463413,
+    "cl": 0.12134774774312973,
+    "cd": 0.0128960981965065
+   }
+  ],
+  "ar_by_re": [
+   {
+    "lo": 40000.0,
+    "hi": 100000.0,
+    "n": 111586,
+    "cl": 0.23312614858150482,
+    "cd": 0.030280636623501778
+   },
+   {
+    "lo": 100000.0,
+    "hi": 300000.0,
+    "n": 223263,
+    "cl": 0.13059492409229279,
+    "cd": 0.014532792381942272
+   },
+   {
+    "lo": 300000.0,
+    "hi": 1000000.0,
+    "n": 379132,
+    "cl": 0.09262935072183609,
+    "cd": 0.008878395892679691
+   },
+   {
+    "lo": 1000000.0,
+    "hi": 3000000.0,
+    "n": 261203,
+    "cl": 0.09390995651483536,
+    "cd": 0.00725445244461298
+   },
+   {
+    "lo": 3000000.0,
+    "hi": 21000000.0,
+    "n": 1452360,
+    "cl": 0.08823410421609879,
+    "cd": 0.005715442355722189
+   }
+  ],
+  "ar_by_mach": [
+   {
+    "lo": -0.01,
+    "hi": 0.05,
+    "n": 636250,
+    "cl": 0.08916384726762772,
+    "cd": 0.006819233298301697
+   },
+   {
+    "lo": 0.05,
+    "hi": 0.15,
+    "n": 629490,
+    "cl": 0.09199753403663635,
+    "cd": 0.007072768174111843
+   },
+   {
+    "lo": 0.15,
+    "hi": 0.3,
+    "n": 616820,
+    "cl": 0.10510500520467758,
+    "cd": 0.009440790861845016
+   },
+   {
+    "lo": 0.3,
+    "hi": 0.51,
+    "n": 544984,
+    "cl": 0.1165056824684143,
+    "cd": 0.01022256538271904
+   }
+  ]
+ },
+ "latency": {
+  "cpu_b1_1thread_ms": {
+   "median": 0.5136459367349744,
+   "p90": 0.5394837353378534
+  },
+  "fused_cpp_b1_us": {
+   "full_median": 37.22950350493193,
+   "geom_cached_median": 29.29195761680603,
+   "max_abs_diff_vs_torch": 3.159046173095703e-06
+  },
+  "cpu_batched_us_per_polar": {
+   "bs": 128,
+   "us": 103.93894881417509
+  },
+  "mps_batched_us_per_polar": {
+   "bs": 1024,
+   "us": 15.835748297376995
+  }
+ },
+ "train": {
+  "epoch": 316,
+  "val_causal": {
+   "loss": 0.3615777584559777,
+   "cl": 0.09904495626688004,
+   "cd": 0.008398436941206455,
+   "stall_cl": 0.11063989251852036,
+   "stall_cd": 0.012796425260603428
+  },
+  "variant": {
+   "id": 70,
+   "slug": "ref_ar_eqw_d8",
+   "name": "FoilCORE reference at d=8 (embeddings learned from scratch)"
+  }
+ }
+}

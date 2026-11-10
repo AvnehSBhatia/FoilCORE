@@ -1,0 +1,49 @@
+[fast_train] device cuda  variant 60
+[fast_train] FoilCORE + error head + profile memory (camber/thickness at 10 stations) [ref_ar_eqw_errhead_profile]
+[fast_train] loaded tensor cache train_tensors_a7e83aef8d.pt: 272748 rows, T_max=81
+[fast_train] loaded tensor cache val_tensors_3882da134e.pt: 34344 rows, T_max=81
+[fast_train] loaded 2 geom encoder tensors
+[fast_train] loaded 7 PathNonlinearity tensors
+[fast_train] 4688 params  bs=1024  lr=0.0003  compile=True  bf16=False
+W0818 04:31:18.570000 48161 torch/_inductor/utils.py:1436] [8/0] Not enough SMs to use max_autotune_gemm mode
+Epoch   1/100 | 125s+12s | train L 1.9784 (Cl 0.8178 Cd 0.6714) err=0.9002 | val AR L 1.8249 Cl 0.6795 Cd 0.03549 stallCd 0.05566 | TF Cl 0.6806 Cd 0.03556 | lr 6.00e-05
+Epoch   2/100 | 41s+12s | train L 1.5180 (Cl 0.4727 Cd 0.5840) err=0.7909 | val AR L 1.2124 Cl 0.2424 Cd 0.02889 stallCd 0.05424 | TF Cl 0.2444 Cd 0.02901 | lr 1.20e-04
+Epoch   3/100 | 41s+12s | train L 1.1229 (Cl 0.2322 Cd 0.4682) err=0.7209 | val AR L 1.0364 Cl 0.2060 Cd 0.02314 stallCd 0.04423 | TF Cl 0.2075 Cd 0.02346 | lr 1.80e-04
+Epoch   4/100 | 42s+12s | train L 0.9700 (Cl 0.2153 Cd 0.3810) err=0.6654 | val AR L 0.8924 Cl 0.2039 Cd 0.01886 stallCd 0.03251 | TF Cl 0.1986 Cd 0.01813 | lr 2.40e-04
+Epoch   5/100 | 41s+13s | train L 0.8172 (Cl 0.2091 Cd 0.3102) err=0.5574 | val AR L 0.7393 Cl 0.1841 Cd 0.01587 stallCd 0.02729 | TF Cl 0.1854 Cd 0.01568 | lr 3.00e-04
+Epoch   6/100 | 41s+12s | train L 0.7081 (Cl 0.1937 Cd 0.2749) err=0.4759 | val AR L 0.6557 Cl 0.1639 Cd 0.01420 stallCd 0.02378 | TF Cl 0.1643 Cd 0.01420 | lr 3.00e-04
+Epoch   7/100 | 41s+12s | train L 0.6431 (Cl 0.1717 Cd 0.2523) err=0.4387 | val AR L 0.6056 Cl 0.1431 Cd 0.01322 stallCd 0.02182 | TF Cl 0.1421 Cd 0.01296 | lr 3.00e-04
+Epoch   8/100 | 41s+12s | train L 0.5948 (Cl 0.1531 Cd 0.2325) err=0.4109 | val AR L 0.5648 Cl 0.1321 Cd 0.01208 stallCd 0.01981 | TF Cl 0.1282 Cd 0.01176 | lr 3.00e-04
+Epoch   9/100 | 41s+12s | train L 0.5578 (Cl 0.1415 Cd 0.2143) err=0.3908 | val AR L 0.5270 Cl 0.1213 Cd 0.01087 stallCd 0.01768 | TF Cl 0.1207 Cd 0.01082 | lr 3.00e-04
+Epoch  10/100 | 41s+12s | train L 0.5315 (Cl 0.1344 Cd 0.2005) err=0.3776 | val AR L 0.5069 Cl 0.1157 Cd 0.01033 stallCd 0.01666 | TF Cl 0.1166 Cd 0.01038 | lr 3.00e-04
+Epoch  11/100 | 41s+12s | train L 0.5127 (Cl 0.1293 Cd 0.1915) err=0.3661 | val AR L 0.4949 Cl 0.1133 Cd 0.01001 stallCd 0.01600 | TF Cl 0.1127 Cd 0.00981 | lr 3.00e-04
+Epoch  12/100 | 41s+12s | train L 0.4996 (Cl 0.1257 Cd 0.1856) err=0.3581 | val AR L 0.4816 Cl 0.1107 Cd 0.00959 stallCd 0.01537 | TF Cl 0.1107 Cd 0.00958 | lr 3.00e-04
+Epoch  13/100 | 41s+12s | train L 0.4870 (Cl 0.1226 Cd 0.1796) err=0.3508 | val AR L 0.4843 Cl 0.1127 Cd 0.01000 stallCd 0.01571 | TF Cl 0.1109 Cd 0.00986 | lr 3.00e-04
+Epoch  14/100 | 41s+12s | train L 0.4763 (Cl 0.1200 Cd 0.1748) err=0.3437 | val AR L 0.4596 Cl 0.1061 Cd 0.00907 stallCd 0.01446 | TF Cl 0.1049 Cd 0.00904 | lr 3.00e-04
+Epoch  15/100 | 41s+12s | train L 0.4653 (Cl 0.1173 Cd 0.1700) err=0.3362 | val AR L 0.4502 Cl 0.1038 Cd 0.00886 stallCd 0.01406 | TF Cl 0.1026 Cd 0.00872 | lr 3.00e-04
+Epoch  16/100 | 34s+6s | train L 0.4547 (Cl 0.1144 Cd 0.1658) err=0.3296 | val AR L 0.4397 Cl 0.1012 Cd 0.00863 stallCd 0.01369 | TF Cl 0.1002 Cd 0.00855 | lr 3.00e-04
+Epoch  17/100 | 22s+7s | train L 0.4444 (Cl 0.1116 Cd 0.1617) err=0.3239 | val AR L 0.4289 Cl 0.0983 Cd 0.00835 stallCd 0.01324 | TF Cl 0.0976 Cd 0.00838 | lr 3.00e-04
+Epoch  18/100 | 24s+12s | train L 0.4342 (Cl 0.1087 Cd 0.1580) err=0.3193 | val AR L 0.4192 Cl 0.0961 Cd 0.00818 stallCd 0.01293 | TF Cl 0.0954 Cd 0.00820 | lr 3.00e-04
+Epoch  19/100 | 25s+6s | train L 0.4262 (Cl 0.1063 Cd 0.1555) err=0.3157 | val AR L 0.4114 Cl 0.0941 Cd 0.00802 stallCd 0.01270 | TF Cl 0.0930 Cd 0.00790 | lr 3.00e-04
+Epoch  20/100 | 28s+12s | train L 0.4179 (Cl 0.1040 Cd 0.1525) err=0.3120 | val AR L 0.4024 Cl 0.0919 Cd 0.00780 stallCd 0.01231 | TF Cl 0.0914 Cd 0.00778 | lr 3.00e-04
+Epoch  21/100 | 43s+13s | train L 0.4101 (Cl 0.1020 Cd 0.1493) err=0.3083 | val AR L 0.3995 Cl 0.0921 Cd 0.00774 stallCd 0.01212 | TF Cl 0.0921 Cd 0.00776 | lr 3.00e-04
+Epoch  22/100 | 44s+13s | train L 0.4044 (Cl 0.1007 Cd 0.1474) err=0.3044 | val AR L 0.3955 Cl 0.0909 Cd 0.00773 stallCd 0.01209 | TF Cl 0.0905 Cd 0.00768 | lr 3.00e-04
+Epoch  23/100 | 45s+13s | train L 0.3991 (Cl 0.0996 Cd 0.1454) err=0.3003 | val AR L 0.3867 Cl 0.0890 Cd 0.00751 stallCd 0.01176 | TF Cl 0.0881 Cd 0.00757 | lr 3.00e-04
+Epoch  24/100 | 45s+13s | train L 0.3933 (Cl 0.0983 Cd 0.1429) err=0.2960 | val AR L 0.3830 Cl 0.0876 Cd 0.00746 stallCd 0.01153 | TF Cl 0.0876 Cd 0.00750 | lr 3.00e-04
+Epoch  25/100 | 40s+11s | train L 0.3888 (Cl 0.0972 Cd 0.1413) err=0.2930 | val AR L 0.3801 Cl 0.0881 Cd 0.00741 stallCd 0.01166 | TF Cl 0.0869 Cd 0.00729 | lr 3.00e-04
+Epoch  26/100 | 43s+12s | train L 0.3841 (Cl 0.0963 Cd 0.1393) err=0.2887 | val AR L 0.3738 Cl 0.0863 Cd 0.00722 stallCd 0.01123 | TF Cl 0.0860 Cd 0.00722 | lr 3.00e-04
+Epoch  27/100 | 52s+17s | train L 0.3799 (Cl 0.0953 Cd 0.1376) err=0.2853 | val AR L 0.3702 Cl 0.0859 Cd 0.00718 stallCd 0.01128 | TF Cl 0.0850 Cd 0.00709 | lr 3.00e-04
+Epoch  28/100 | 55s+19s | train L 0.3759 (Cl 0.0945 Cd 0.1359) err=0.2819 | val AR L 0.3661 Cl 0.0850 Cd 0.00705 stallCd 0.01098 | TF Cl 0.0844 Cd 0.00703 | lr 3.00e-04
+Epoch  29/100 | 61s+18s | train L 0.3725 (Cl 0.0938 Cd 0.1346) err=0.2790 | val AR L 0.3636 Cl 0.0839 Cd 0.00704 stallCd 0.01090 | TF Cl 0.0847 Cd 0.00721 | lr 3.00e-04
+Epoch  30/100 | 61s+18s | train L 0.3687 (Cl 0.0929 Cd 0.1330) err=0.2765 | val AR L 0.3591 Cl 0.0834 Cd 0.00691 stallCd 0.01082 | TF Cl 0.0830 Cd 0.00690 | lr 3.00e-04
+Epoch  31/100 | 61s+18s | train L 0.3648 (Cl 0.0921 Cd 0.1311) err=0.2738 | val AR L 0.3573 Cl 0.0834 Cd 0.00688 stallCd 0.01075 | TF Cl 0.0823 Cd 0.00679 | lr 3.00e-04
+Epoch  32/100 | 61s+18s | train L 0.3611 (Cl 0.0912 Cd 0.1295) err=0.2718 | val AR L 0.3532 Cl 0.0822 Cd 0.00679 stallCd 0.01058 | TF Cl 0.0822 Cd 0.00686 | lr 3.00e-04
+Epoch  33/100 | 62s+18s | train L 0.3579 (Cl 0.0905 Cd 0.1282) err=0.2693 | val AR L 0.3515 Cl 0.0820 Cd 0.00680 stallCd 0.01074 | TF Cl 0.0808 Cd 0.00668 | lr 3.00e-04
+Epoch  34/100 | 61s+18s | train L 0.3550 (Cl 0.0899 Cd 0.1270) err=0.2671 | val AR L 0.3489 Cl 0.0821 Cd 0.00674 stallCd 0.01062 | TF Cl 0.0814 Cd 0.00668 | lr 3.00e-04
+Epoch  35/100 | 61s+18s | train L 0.3521 (Cl 0.0893 Cd 0.1258) err=0.2646 | val AR L 0.3454 Cl 0.0807 Cd 0.00664 stallCd 0.01045 | TF Cl 0.0797 Cd 0.00655 | lr 3.00e-04
+Epoch  36/100 | 61s+18s | train L 0.3490 (Cl 0.0886 Cd 0.1244) err=0.2623 | val AR L 0.3402 Cl 0.0797 Cd 0.00645 stallCd 0.01013 | TF Cl 0.0800 Cd 0.00654 | lr 3.00e-04
+Epoch  37/100 | 62s+18s | train L 0.3462 (Cl 0.0880 Cd 0.1232) err=0.2597 | val AR L 0.3364 Cl 0.0791 Cd 0.00637 stallCd 0.01003 | TF Cl 0.0792 Cd 0.00644 | lr 3.00e-04
+Epoch  38/100 | 62s+18s | train L 0.3434 (Cl 0.0874 Cd 0.1220) err=0.2572 | val AR L 0.3361 Cl 0.0791 Cd 0.00641 stallCd 0.01001 | TF Cl 0.0798 Cd 0.00647 | lr 3.00e-04
+Epoch  39/100 | 61s+18s | train L 0.3404 (Cl 0.0868 Cd 0.1206) err=0.2549 | val AR L 0.3323 Cl 0.0783 Cd 0.00626 stallCd 0.00977 | TF Cl 0.0783 Cd 0.00631 | lr 3.00e-04
+Epoch  40/100 | 61s+18s | train L 0.3385 (Cl 0.0863 Cd 0.1200) err=0.2530 | val AR L 0.3301 Cl 0.0776 Cd 0.00626 stallCd 0.00991 | TF Cl 0.0769 Cd 0.00623 | lr 3.00e-04
+Epoch  41/100 | 62s+18s | train L 0.3347 (Cl 0.0855 Cd 0.1179) err=0.2510 | val AR L 0.3264 Cl 0.0772 Cd 0.00612 stallCd 0.00972 | TF Cl 0.0768 Cd 0.00615 | lr 3.00e-04

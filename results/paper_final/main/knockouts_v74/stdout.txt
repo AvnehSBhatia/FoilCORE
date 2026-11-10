@@ -1,0 +1,100 @@
+AeroDataset: loaded 34344 rows from cache val_5c7ceea8717b.pkl
+
+=== checkpoints/v74/foilcore_best.pt  (2373 params, 2048 val rows, causal AR) ===
+
+Weights (mean|w|, frac<1e-2):
+  path.a_lin                               n=   16  mean|w|=1.0500  <1e-2:0.00
+  path.m                                   n=   16  mean|w|=0.0776  <1e-2:0.06
+  path.a                                   n=   64  mean|w|=0.1991  <1e-2:0.02
+  path.b                                   n=   64  mean|w|=0.6629  <1e-2:0.02
+  path.gauss_amp                           n=   16  mean|w|=0.1237  <1e-2:0.06
+  path.gauss_mu                            n=   16  mean|w|=0.2430  <1e-2:0.00
+  path.gauss_log_sigma                     n=   16  mean|w|=0.3211  <1e-2:0.00
+  geom_encoder.point.weight                n=   32  mean|w|=0.9944  <1e-2:0.03
+  geom_encoder.point.bias                  n=   16  mean|w|=0.3693  <1e-2:0.00
+  mem_mix.log_A                            n=   16  mean|w|=0.4972  <1e-2:0.00
+  mem_mix.W_delta.weight                   n=   48  mean|w|=0.4658  <1e-2:0.00
+  mem_mix.W_delta.bias                     n=   16  mean|w|=0.5731  <1e-2:0.00
+  mem_mix.W_B.weight                       n=   48  mean|w|=0.3125  <1e-2:0.02
+  mem_mix.W_B.bias                         n=   16  mean|w|=0.4818  <1e-2:0.00
+  mem_mix.W_C.weight                       n=   48  mean|w|=0.3671  <1e-2:0.02
+  mem_mix.W_C.bias                         n=   16  mean|w|=0.7483  <1e-2:0.00
+  head.weight                              n=   32  mean|w|=0.3228  <1e-2:0.06
+  head.bias                                n=    2  mean|w|=0.2418  <1e-2:0.00
+  err_head.reduce.weight                   n=   64  mean|w|=0.2383  <1e-2:0.06
+  err_head.reduce.bias                     n=    4  mean|w|=0.0851  <1e-2:0.25
+  err_head.mlp.0.weight                    n=  336  mean|w|=0.2347  <1e-2:0.04
+  err_head.mlp.0.bias                      n=   16  mean|w|=0.1135  <1e-2:0.00
+  err_head.mlp.2.weight                    n=   32  mean|w|=0.4957  <1e-2:0.00
+  err_head.mlp.2.bias                      n=    2  mean|w|=0.1367  <1e-2:0.00
+  polar_in.weight                          n=  112  mean|w|=0.2080  <1e-2:0.04
+  polar_in.bias                            n=   16  mean|w|=0.2493  <1e-2:0.00
+  profile_in.weight                        n=  320  mean|w|=0.6252  <1e-2:0.02
+  profile_in.bias                          n=   16  mean|w|=0.2188  <1e-2:0.00
+  err_expert.mlp.0.weight                  n=  288  mean|w|=0.2570  <1e-2:0.04
+  err_expert.mlp.0.bias                    n=   16  mean|w|=0.1784  <1e-2:0.00
+  err_expert.mlp.2.weight                  n=   32  mean|w|=0.2643  <1e-2:0.00
+  err_expert.mlp.2.bias                    n=    2  mean|w|=0.0070  <1e-2:0.50
+  err_expert.gate.weight                   n=    2  mean|w|=2.0050  <1e-2:0.00
+  err_expert.gate.bias                     n=    1  mean|w|=0.6106  <1e-2:0.00
+  agent.0.attn.s1                          n=    1  mean|w|=1.9459  <1e-2:0.00
+  agent.0.attn.s2                          n=    1  mean|w|=0.0997  <1e-2:0.00
+  agent.0.attn.s3                          n=    1  mean|w|=3.0659  <1e-2:0.00
+  agent.0.attn.local_log_tau               n=    1  mean|w|=2.3542  <1e-2:0.00
+  agent.0.attn.W_v.weight                  n=  256  mean|w|=0.1298  <1e-2:0.05
+  agent.0.attn.W_v.bias                    n=   16  mean|w|=0.1388  <1e-2:0.00
+  agent.0.norm.weight                      n=   16  mean|w|=0.9346  <1e-2:0.00
+  agent.0.norm.bias                        n=   16  mean|w|=0.1764  <1e-2:0.06
+  agent.1.attn.s1                          n=    1  mean|w|=2.0561  <1e-2:0.00
+  agent.1.attn.s2                          n=    1  mean|w|=0.0997  <1e-2:0.00
+  agent.1.attn.s3                          n=    1  mean|w|=3.0384  <1e-2:0.00
+  agent.1.attn.local_log_tau               n=    1  mean|w|=3.2607  <1e-2:0.00
+  agent.1.attn.W_v.weight                  n=  256  mean|w|=0.1472  <1e-2:0.05
+  agent.1.attn.W_v.bias                    n=   16  mean|w|=0.1231  <1e-2:0.00
+  agent.1.norm.weight                      n=   16  mean|w|=0.8631  <1e-2:0.00
+  agent.1.norm.bias                        n=   16  mean|w|=0.1527  <1e-2:0.06
+
+Activation RMS:
+
+Error head: corr(pred,target)=[]  pred mean=[] target mean=[]
+
+Knockouts (causal AR).  baseline Cl 0.0584 Cd 0.00436 | stall Cl 0.0621 Cd 0.00721
+  (TF for reference: Cl 0.0586 Cd 0.00437)
+  block0.no_attn           Cl 0.0810 (+0.0226)  Cd 0.00765 (+0.00329)  stall Cd 0.01143
+  block0.Wv_identity       Cl 0.0933 (+0.0349)  Cd 0.00897 (+0.00461)  stall Cd 0.01375
+  block0.tau_off           Cl 0.0705 (+0.0121)  Cd 0.00621 (+0.00185)  stall Cd 0.00934
+  block0.no_layernorm      Cl 0.1587 (+0.1003)  Cd 0.02142 (+0.01706)  stall Cd 0.03340
+  block1.no_attn           Cl 0.0728 (+0.0144)  Cd 0.00711 (+0.00276)  stall Cd 0.01141
+  block1.Wv_identity       Cl 0.0755 (+0.0171)  Cd 0.00703 (+0.00267)  stall Cd 0.01112
+  block1.tau_off           Cl 0.0626 (+0.0042)  Cd 0.00510 (+0.00074)  stall Cd 0.00839
+  block1.no_layernorm      Cl 0.1896 (+0.1312)  Cd 0.02241 (+0.01805)  stall Cd 0.03524
+  all_blocks_no_attn       Cl 0.0869 (+0.0285)  Cd 0.00950 (+0.00514)  stall Cd 0.01509
+  pathnl_identity          Cl 0.5616 (+0.5031)  Cd 0.03750 (+0.03314)  stall Cd 0.06366
+  drop_memory_global       Cl 0.1475 (+0.0891)  Cd 0.01602 (+0.01167)  stall Cd 0.02627
+  drop_memory_le           Cl 0.1732 (+0.1148)  Cd 0.02599 (+0.02163)  stall Cd 0.04045
+  drop_memory_te           Cl 0.4538 (+0.3954)  Cd 0.03066 (+0.02630)  stall Cd 0.03612
+
+  hidden_channel_knockouts: least load-bearing channels (Cl,Cd after zeroing):
+    ch  7  Cl 0.0782 (+0.0198)  Cd 0.00437 (+0.00001)
+    ch 15  Cl 0.1023 (+0.0439)  Cd 0.00436 (+0.00000)
+    ch  5  Cl 0.0762 (+0.0178)  Cd 0.00449 (+0.00013)
+    ch 10  Cl 0.0584 (+0.0000)  Cd 0.00456 (+0.00021)
+    ch 11  Cl 0.0584 (-0.0000)  Cd 0.00483 (+0.00047)
+    ch  1  Cl 0.0908 (+0.0324)  Cd 0.00566 (+0.00131)
+    ch  3  Cl 0.2262 (+0.1678)  Cd 0.00601 (+0.00165)
+    ch  9  Cl 0.1399 (+0.0815)  Cd 0.00634 (+0.00199)
+  most load-bearing: ch6(+0.035), ch13(+0.033), ch8(+0.062), ch4(+0.031), ch12(+0.002)
+
+  ctx_channel_knockouts: least load-bearing channels (Cl,Cd after zeroing):
+    ch  5  Cl 0.0957 (+0.0373)  Cd 0.00698 (+0.00262)
+    ch  7  Cl 0.2436 (+0.1852)  Cd 0.00722 (+0.00286)
+    ch  2  Cl 0.0905 (+0.0321)  Cd 0.00786 (+0.00351)
+    ch 11  Cl 0.0793 (+0.0209)  Cd 0.00808 (+0.00373)
+    ch 10  Cl 0.0779 (+0.0195)  Cd 0.00953 (+0.00517)
+    ch 15  Cl 0.3770 (+0.3185)  Cd 0.00905 (+0.00469)
+    ch  9  Cl 0.2206 (+0.1622)  Cd 0.00959 (+0.00523)
+    ch 14  Cl 0.0725 (+0.0141)  Cd 0.01152 (+0.00716)
+  most load-bearing: ch13(+0.050), ch8(+0.086), ch1(+0.136), ch12(+0.020), ch0(+0.167)
+
+Wrote results/paper_final/main/knockouts_v74/analysis.json
+

@@ -1,0 +1,12 @@
+{
+ "ckpt": "neuralfoil:xxsmall",
+ "idle_cpu_mW": 189.16666666666666,
+ "busy_cpu_mW": 5860.541666666667,
+ "samples": [
+  30,
+  24
+ ],
+ "polars_per_s": 1750.1,
+ "uJ_per_polar_dynamic": 3240.600537112165,
+ "uJ_per_polar_total": 3348.689598689599
+}

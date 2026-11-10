@@ -1,0 +1,246 @@
+{
+ "ckpt": "results/pod_runs/20260819_001018_v80/foilcore_best.pt",
+ "n_params": 5822,
+ "param_breakdown": {
+  "path": 416,
+  "geom_encoder": 96,
+  "mem_mix": 416,
+  "head": 66,
+  "profile_in": 672,
+  "polar_in": 192,
+  "bb_in": 462,
+  "backbone": 3472,
+  "bb_head": 30
+ },
+ "config": {
+  "d_model": 32,
+  "d_geom": 32,
+  "model_type": "seqbaseline",
+  "num_blocks": 2,
+  "block_mode": "all_alt",
+  "shared_qk_scalars": true,
+  "path_mode": "full",
+  "share_path": true,
+  "n_path_terms": 4,
+  "outer_layers": 0,
+  "dropout": 0.05,
+  "residual": true,
+  "use_causal_mask": false,
+  "decoder_hidden": 0,
+  "output_dims": 2,
+  "mlp_hidden": 32,
+  "n_heads": 2,
+  "le_xmax": 0.25,
+  "te_xmin": 0.75,
+  "draft_loss_weight": 0.25,
+  "n_geom_memories": 3,
+  "n_landmarks": 4,
+  "contour_bidirectional": true,
+  "contour_d_cond": 3,
+  "contour_log_a_init": "const",
+  "contour_mode": "ssm",
+  "directional_landmarks": false,
+  "landmark_mean": false,
+  "mem_log_a_init": -0.5,
+  "polar_mixer": "iir_clcd",
+  "iir_tau_init": "const",
+  "polar_in_clcd": true,
+  "polar_alpha_sinus": true,
+  "err_head_hidden": 16,
+  "err_head_mem_dim": 4,
+  "router_threshold": 0.5,
+  "use_stall_router": true,
+  "use_selective_ssm": true,
+  "use_local_kernel": true,
+  "use_err_head": false,
+  "profile_stations": 10,
+  "moe_experts": 0,
+  "geom_pool": "region3",
+  "softbin_k": 4,
+  "use_err_expert": false,
+  "err_expert_hidden": 16,
+  "seq_backbone": "transformer",
+  "bb_d": 14,
+  "bb_layers": 2,
+  "bb_t_max": 96,
+  "bb_inner": 24,
+  "bb_state": 8
+ },
+ "accuracy": {
+  "n_rows": 34043,
+  "n_points": 2427544,
+  "ar": {
+   "cl": 0.047772929072380066,
+   "cd": 0.00366947241127491,
+   "stall_cl": 0.05429873988032341,
+   "stall_cd": 0.006142718251794577,
+   "linear_cl": 0.04396885633468628,
+   "linear_cd": 0.0022277473472058773
+  },
+  "tf": {
+   "cl": 0.047376733273267746,
+   "cd": 0.003603860968723893,
+   "stall_cl": 0.05355655029416084,
+   "stall_cd": 0.006056392565369606,
+   "linear_cl": 0.04377433657646179,
+   "linear_cd": 0.0021742109674960375
+  },
+  "seeded1": {
+   "cl": 0.047772929072380066,
+   "cd": 0.00366947241127491,
+   "stall_cl": 0.05429873988032341,
+   "stall_cd": 0.006142718251794577,
+   "linear_cl": 0.04396885633468628,
+   "linear_cd": 0.0022277473472058773
+  },
+  "draft": {
+   "cl": 0.09422556310892105,
+   "cd": 0.01171578373759985
+  },
+  "ar_by_alpha": [
+   {
+    "lo": -20.0,
+    "hi": -12.0,
+    "n": 380602,
+    "cl": 0.0601322166621685,
+    "cd": 0.006822651717811823
+   },
+   {
+    "lo": -12.0,
+    "hi": -6.0,
+    "n": 419212,
+    "cl": 0.05091987922787666,
+    "cd": 0.0036064910236746073
+   },
+   {
+    "lo": -6.0,
+    "hi": 0.0,
+    "n": 392415,
+    "cl": 0.03773139417171478,
+    "cd": 0.0014817663468420506
+   },
+   {
+    "lo": 0.0,
+    "hi": 6.0,
+    "n": 359950,
+    "cl": 0.04318283125758171,
+    "cd": 0.0013310698559507728
+   },
+   {
+    "lo": 6.0,
+    "hi": 12.0,
+    "n": 392893,
+    "cl": 0.04444553703069687,
+    "cd": 0.002529369667172432
+   },
+   {
+    "lo": 12.0,
+    "hi": 20.1,
+    "n": 463413,
+    "cl": 0.048502303659915924,
+    "cd": 0.005484342575073242
+   }
+  ],
+  "ar_by_re": [
+   {
+    "lo": 40000.0,
+    "hi": 100000.0,
+    "n": 111586,
+    "cl": 0.09420596808195114,
+    "cd": 0.008203526958823204
+   },
+   {
+    "lo": 100000.0,
+    "hi": 300000.0,
+    "n": 223263,
+    "cl": 0.07269309461116791,
+    "cd": 0.006293972954154015
+   },
+   {
+    "lo": 300000.0,
+    "hi": 1000000.0,
+    "n": 379132,
+    "cl": 0.04692056030035019,
+    "cd": 0.004593266174197197
+   },
+   {
+    "lo": 1000000.0,
+    "hi": 3000000.0,
+    "n": 261203,
+    "cl": 0.044461607933044434,
+    "cd": 0.0037689406890422106
+   },
+   {
+    "lo": 3000000.0,
+    "hi": 21000000.0,
+    "n": 1452360,
+    "cl": 0.04119265452027321,
+    "cd": 0.0026586265303194523
+   }
+  ],
+  "ar_by_mach": [
+   {
+    "lo": -0.01,
+    "hi": 0.05,
+    "n": 636250,
+    "cl": 0.043792225420475006,
+    "cd": 0.003007344203069806
+   },
+   {
+    "lo": 0.05,
+    "hi": 0.15,
+    "n": 629490,
+    "cl": 0.044651344418525696,
+    "cd": 0.003229960333555937
+   },
+   {
+    "lo": 0.15,
+    "hi": 0.3,
+    "n": 616820,
+    "cl": 0.05028867349028587,
+    "cd": 0.004147345665842295
+   },
+   {
+    "lo": 0.3,
+    "hi": 0.51,
+    "n": 544984,
+    "cl": 0.053178559988737106,
+    "cd": 0.0044092838652431965
+   }
+  ]
+ },
+ "latency": {
+  "cpu_b1_1thread_ms": {
+   "median": 1.0608539450913668,
+   "p90": 1.103633688762784
+  },
+  "fused_cpp_b1_us": {
+   "full_median": 166.12489707767963,
+   "geom_cached_median": 131.6874986514449,
+   "max_abs_diff_vs_torch": 2.86102294921875e-06
+  },
+  "cpu_batched_us_per_polar": {
+   "bs": 512,
+   "us": 181.91852625477622
+  },
+  "mps_batched_us_per_polar": {
+   "bs": 1024,
+   "us": 31.932002730172822
+  }
+ },
+ "train": {
+  "epoch": 287,
+  "val_causal": {
+   "loss": 0.1995304711163044,
+   "cl": 0.04809797182679176,
+   "cd": 0.0037654198240488768,
+   "stall_cl": 0.054555993527173996,
+   "stall_cd": 0.006317174062132835
+  },
+  "variant": {
+   "id": 80,
+   "slug": "seq_transformer",
+   "name": "Baseline: FoilCORE front-end + 2-layer pre-LN Transformer encoder (PatchTST, patch length 1)"
+  }
+ }
+}

@@ -1,0 +1,244 @@
+{
+ "ckpt": "results/pod_runs/20260819_001018_v81/foilcore_epoch_100.pt",
+ "n_params": 11780,
+ "param_breakdown": {
+  "path": 416,
+  "geom_encoder": 96,
+  "mem_mix": 416,
+  "head": 66,
+  "profile_in": 672,
+  "polar_in": 192,
+  "bb_in": 264,
+  "backbone": 9640,
+  "bb_head": 18
+ },
+ "config": {
+  "d_model": 32,
+  "d_geom": 32,
+  "model_type": "seqbaseline",
+  "num_blocks": 2,
+  "block_mode": "all_alt",
+  "shared_qk_scalars": true,
+  "path_mode": "full",
+  "share_path": true,
+  "n_path_terms": 4,
+  "outer_layers": 0,
+  "dropout": 0.05,
+  "residual": true,
+  "use_causal_mask": false,
+  "decoder_hidden": 0,
+  "output_dims": 2,
+  "mlp_hidden": 32,
+  "n_heads": 2,
+  "le_xmax": 0.25,
+  "te_xmin": 0.75,
+  "draft_loss_weight": 0.25,
+  "n_geom_memories": 3,
+  "n_landmarks": 4,
+  "contour_bidirectional": true,
+  "contour_d_cond": 3,
+  "contour_log_a_init": "const",
+  "contour_mode": "ssm",
+  "directional_landmarks": false,
+  "landmark_mean": false,
+  "mem_log_a_init": -0.5,
+  "polar_mixer": "iir_clcd",
+  "iir_tau_init": "const",
+  "polar_in_clcd": true,
+  "polar_alpha_sinus": true,
+  "err_head_hidden": 16,
+  "err_head_mem_dim": 4,
+  "router_threshold": 0.5,
+  "use_stall_router": true,
+  "use_selective_ssm": true,
+  "use_local_kernel": true,
+  "use_err_head": false,
+  "profile_stations": 10,
+  "moe_experts": 0,
+  "geom_pool": "region3",
+  "softbin_k": 4,
+  "use_err_expert": false,
+  "err_expert_hidden": 16,
+  "seq_backbone": "tsmixer",
+  "bb_d": 8,
+  "bb_layers": 1,
+  "bb_t_max": 96,
+  "bb_inner": 24,
+  "bb_state": 8
+ },
+ "accuracy": {
+  "n_rows": 34043,
+  "n_points": 2427544,
+  "ar": {
+   "cl": 0.0696568638086319,
+   "cd": 0.005345152225345373,
+   "stall_cl": 0.07962119579315186,
+   "stall_cd": 0.00866315234452486,
+   "linear_cl": 0.06384836882352829,
+   "linear_cd": 0.003410996636375785
+  },
+  "tf": {
+   "cl": 0.06912996619939804,
+   "cd": 0.005268846172839403,
+   "stall_cl": 0.0784536823630333,
+   "stall_cd": 0.008508450351655483,
+   "linear_cl": 0.06369490921497345,
+   "linear_cd": 0.0033803891856223345
+  },
+  "seeded1": {
+   "cl": 0.0696568638086319,
+   "cd": 0.005345152225345373,
+   "stall_cl": 0.07962119579315186,
+   "stall_cd": 0.00866315234452486,
+   "linear_cl": 0.06384836882352829,
+   "linear_cd": 0.003410996636375785
+  },
+  "draft": {
+   "cl": 0.09992115199565887,
+   "cd": 0.012576599605381489
+  },
+  "ar_by_alpha": [
+   {
+    "lo": -20.0,
+    "hi": -12.0,
+    "n": 380602,
+    "cl": 0.07332507520914078,
+    "cd": 0.007911519147455692
+   },
+   {
+    "lo": -12.0,
+    "hi": -6.0,
+    "n": 419212,
+    "cl": 0.061850156635046005,
+    "cd": 0.004627005197107792
+   },
+   {
+    "lo": -6.0,
+    "hi": 0.0,
+    "n": 392415,
+    "cl": 0.05107319355010986,
+    "cd": 0.002418354619294405
+   },
+   {
+    "lo": 0.0,
+    "hi": 6.0,
+    "n": 359950,
+    "cl": 0.06426336616277695,
+    "cd": 0.0022219617385417223
+   },
+   {
+    "lo": 6.0,
+    "hi": 12.0,
+    "n": 392893,
+    "cl": 0.07865966856479645,
+    "cd": 0.004376254044473171
+   },
+   {
+    "lo": 12.0,
+    "hi": 20.1,
+    "n": 463413,
+    "cl": 0.08501814305782318,
+    "cd": 0.009302749298512936
+   }
+  ],
+  "ar_by_re": [
+   {
+    "lo": 40000.0,
+    "hi": 100000.0,
+    "n": 111586,
+    "cl": 0.1457710862159729,
+    "cd": 0.013700599782168865
+   },
+   {
+    "lo": 100000.0,
+    "hi": 300000.0,
+    "n": 223263,
+    "cl": 0.10158665478229523,
+    "cd": 0.00970031600445509
+   },
+   {
+    "lo": 300000.0,
+    "hi": 1000000.0,
+    "n": 379132,
+    "cl": 0.06248515471816063,
+    "cd": 0.005984703544527292
+   },
+   {
+    "lo": 1000000.0,
+    "hi": 3000000.0,
+    "n": 261203,
+    "cl": 0.06348789483308792,
+    "cd": 0.005260281264781952
+   },
+   {
+    "lo": 3000000.0,
+    "hi": 21000000.0,
+    "n": 1452360,
+    "cl": 0.06188216805458069,
+    "cd": 0.0038820141926407814
+   }
+  ],
+  "ar_by_mach": [
+   {
+    "lo": -0.01,
+    "hi": 0.05,
+    "n": 636250,
+    "cl": 0.06165347620844841,
+    "cd": 0.0043191369622945786
+   },
+   {
+    "lo": 0.05,
+    "hi": 0.15,
+    "n": 629490,
+    "cl": 0.06312201172113419,
+    "cd": 0.004630839452147484
+   },
+   {
+    "lo": 0.15,
+    "hi": 0.3,
+    "n": 616820,
+    "cl": 0.07575832307338715,
+    "cd": 0.00621601240709424
+   },
+   {
+    "lo": 0.3,
+    "hi": 0.51,
+    "n": 544984,
+    "cl": 0.07964297384023666,
+    "cd": 0.006382414605468512
+   }
+  ]
+ },
+ "latency": {
+  "cpu_b1_1thread_ms": {
+   "median": 0.8090829942375422,
+   "p90": 0.866033649072051
+  },
+  "fused_cpp_b1_us": {
+   "error": "unsupported config"
+  },
+  "cpu_batched_us_per_polar": {
+   "bs": 512,
+   "us": 89.35934656619793
+  },
+  "mps_batched_us_per_polar": {
+   "bs": 1024,
+   "us": 24.938629155712988
+  }
+ },
+ "train": {
+  "epoch": 100,
+  "val_causal": {
+   "loss": 0.2595878190854016,
+   "cl": 0.07012378424406052,
+   "cd": 0.005412952974438667,
+   "stall_cl": 0.07901342213153839,
+   "stall_cd": 0.008692380972206593
+  },
+  "variant": {
+   "id": 81,
+   "slug": "seq_tsmixer",
+   "name": "Baseline: FoilCORE front-end + TSMixer / TinyTimeMixer-style time-mixing MLP (T_max=96)"
+  }
+ }
+}

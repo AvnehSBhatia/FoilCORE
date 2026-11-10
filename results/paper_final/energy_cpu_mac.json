@@ -1,0 +1,12 @@
+{
+ "ckpt": "checkpoints/v61/foilcore_best.pt",
+ "idle_cpu_mW": 247.46666666666667,
+ "busy_cpu_mW": 6963.041666666667,
+ "samples": [
+  30,
+  24
+ ],
+ "polars_per_s": 12303.5,
+ "uJ_per_polar_dynamic": 545.8263908643883,
+ "uJ_per_polar_total": 565.939908698067
+}

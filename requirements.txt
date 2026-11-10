@@ -1,0 +1,8 @@
+torch>=2.0
+numpy
+pandas
+scipy
+pyyaml
+tqdm
+matplotlib>=3.5
+neuralfoil

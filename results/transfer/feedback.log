@@ -1,0 +1,25 @@
+[feedback] start 20260819_001018
+NVIDIA RTX A4500
+launched variant 80 -> runs/20260819_001018_v80 (pid 2733)
+launched variant 81 -> runs/20260819_001018_v81 (pid 2887)
+launched variant 82 -> runs/20260819_001018_v82 (pid 3041)
+launched variant 80 -> runs/20260819_001040_v80 (pid 3217)
+launched variant 82 -> runs/20260819_001040_v82 (pid 3371)
+[feedback] baselines launched
+run                          var params  ep   AR Cl    AR Cd  stallCd   TF Cl    TF Cd best ep best AR Cl best AR Cd  s/ep
+ett ETTh1 oil temperature train (1168, 96, 12) val (100, 96, 12) test (125, 96, 12)
+air Beijing PM2.5 train (2295, 72, 14) val (277, 72, 14) test (283, 72, 14)
+ecg MIT-BIH lead MLII from lead 2 train (38070, 128, 1) val (7614, 128, 1) test (12690, 128, 1)
+[transfer] ecg MIT-BIH lead MLII from lead 2 | draft_bidir seed 0 | 3530 params | train (38070, 128, 1) val (7614, 128, 1) test (12690, 128, 1) | cuda
+[transfer] TEST ecg draft_bidir s0: causal 0.2679 bidir 0.2380 draft 0.2320 (mV) gap +12.6%
+[transfer] ecg MIT-BIH lead MLII from lead 2 | draft_bidir seed 1 | 3530 params | train (38070, 128, 1) val (7614, 128, 1) test (12690, 128, 1) | cuda
+[transfer] TEST ecg draft_bidir s1: causal 0.2426 bidir 0.2288 draft 0.2321 (mV) gap +6.0%
+[transfer] ecg MIT-BIH lead MLII from lead 2 | draft_bidir seed 2 | 3530 params | train (38070, 128, 1) val (7614, 128, 1) test (12690, 128, 1) | cuda
+[transfer] TEST ecg draft_bidir s2: causal 0.2608 bidir 0.2308 draft 0.2322 (mV) gap +13.0%
+[transfer] ecg MIT-BIH lead MLII from lead 2 | draft_dual seed 0 | 3530 params | train (38070, 128, 1) val (7614, 128, 1) test (12690, 128, 1) | cuda
+[transfer] TEST ecg draft_dual s0: causal 0.2328 bidir 0.2321 draft 0.2299 (mV) gap +0.3%
+[transfer] ecg MIT-BIH lead MLII from lead 2 | draft_dual seed 1 | 3530 params | train (38070, 128, 1) val (7614, 128, 1) test (12690, 128, 1) | cuda
+[transfer] TEST ecg draft_dual s1: causal 0.2266 bidir 0.2245 draft 0.2294 (mV) gap +1.0%
+[transfer] ecg MIT-BIH lead MLII from lead 2 | draft_dual seed 2 | 3530 params | train (38070, 128, 1) val (7614, 128, 1) test (12690, 128, 1) | cuda
+[transfer] TEST ecg draft_dual s2: causal 0.2281 bidir 0.2265 draft 0.2279 (mV) gap +0.7%
+[feedback] transfer done

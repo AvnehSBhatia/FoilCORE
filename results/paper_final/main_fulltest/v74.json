@@ -1,0 +1,240 @@
+{
+ "ckpt": "checkpoints/v74/foilcore_best.pt",
+ "n_params": 2373,
+ "param_breakdown": {
+  "path": 208,
+  "geom_encoder": 48,
+  "mem_mix": 208,
+  "head": 34,
+  "err_head": 454,
+  "polar_in": 128,
+  "profile_in": 336,
+  "err_expert": 341,
+  "agent": 616
+ },
+ "config": {
+  "d_model": 16,
+  "d_geom": 16,
+  "model_type": "foilcore",
+  "num_blocks": 2,
+  "block_mode": "all_alt",
+  "shared_qk_scalars": true,
+  "path_mode": "full",
+  "share_path": true,
+  "n_path_terms": 4,
+  "outer_layers": 0,
+  "dropout": 0.05,
+  "residual": true,
+  "use_causal_mask": false,
+  "decoder_hidden": 0,
+  "output_dims": 2,
+  "mlp_hidden": 16,
+  "n_heads": 2,
+  "le_xmax": 0.25,
+  "te_xmin": 0.75,
+  "draft_loss_weight": 0.25,
+  "n_geom_memories": 3,
+  "n_landmarks": 4,
+  "contour_bidirectional": true,
+  "contour_d_cond": 3,
+  "contour_log_a_init": "const",
+  "contour_mode": "ssm",
+  "directional_landmarks": false,
+  "landmark_mean": false,
+  "mem_log_a_init": -0.5,
+  "polar_mixer": "iir_clcd",
+  "iir_tau_init": "const",
+  "polar_in_clcd": true,
+  "polar_alpha_sinus": true,
+  "err_head_hidden": 16,
+  "err_head_mem_dim": 4,
+  "router_threshold": 0.5,
+  "use_stall_router": true,
+  "use_selective_ssm": true,
+  "use_local_kernel": true,
+  "use_err_head": true,
+  "profile_stations": 10,
+  "moe_experts": 0,
+  "geom_pool": "region3",
+  "softbin_k": 4,
+  "use_err_expert": true,
+  "err_expert_hidden": 16
+ },
+ "accuracy": {
+  "n_rows": 34043,
+  "n_points": 2427544,
+  "ar": {
+   "cl": 0.06018765643239021,
+   "cd": 0.004558577202260494,
+   "stall_cl": 0.06556135416030884,
+   "stall_cd": 0.007591770030558109,
+   "linear_cl": 0.05705518648028374,
+   "linear_cd": 0.0027904429007321596
+  },
+  "tf": {
+   "cl": 0.06052898243069649,
+   "cd": 0.004555359482765198,
+   "stall_cl": 0.06553657352924347,
+   "stall_cd": 0.007538280449807644,
+   "linear_cl": 0.0576099157333374,
+   "linear_cd": 0.002816531341522932
+  },
+  "seeded1": {
+   "cl": 0.06181491166353226,
+   "cd": 0.004918138030916452,
+   "stall_cl": 0.06980656087398529,
+   "stall_cd": 0.008502917364239693,
+   "linear_cl": 0.05715634673833847,
+   "linear_cd": 0.0028284683357924223
+  },
+  "draft": {
+   "cl": 0.11346978694200516,
+   "cd": 0.015523206442594528
+  },
+  "ar_by_alpha": [
+   {
+    "lo": -20.0,
+    "hi": -12.0,
+    "n": 380602,
+    "cl": 0.0671943798661232,
+    "cd": 0.007990613579750061
+   },
+   {
+    "lo": -12.0,
+    "hi": -6.0,
+    "n": 419212,
+    "cl": 0.06012817472219467,
+    "cd": 0.004307265859097242
+   },
+   {
+    "lo": -6.0,
+    "hi": 0.0,
+    "n": 392415,
+    "cl": 0.046251825988292694,
+    "cd": 0.0017600101418793201
+   },
+   {
+    "lo": 0.0,
+    "hi": 6.0,
+    "n": 359950,
+    "cl": 0.05803145840764046,
+    "cd": 0.0018034855602309108
+   },
+   {
+    "lo": 6.0,
+    "hi": 12.0,
+    "n": 392893,
+    "cl": 0.06426267325878143,
+    "cd": 0.0033385311253368855
+   },
+   {
+    "lo": 12.0,
+    "hi": 20.1,
+    "n": 463413,
+    "cl": 0.06320200860500336,
+    "cd": 0.007142782211303711
+   }
+  ],
+  "ar_by_re": [
+   {
+    "lo": 40000.0,
+    "hi": 100000.0,
+    "n": 111586,
+    "cl": 0.11286521703004837,
+    "cd": 0.011340240947902203
+   },
+   {
+    "lo": 100000.0,
+    "hi": 300000.0,
+    "n": 223263,
+    "cl": 0.08421293646097183,
+    "cd": 0.007873390801250935
+   },
+   {
+    "lo": 300000.0,
+    "hi": 1000000.0,
+    "n": 379132,
+    "cl": 0.05618979409337044,
+    "cd": 0.005360816605389118
+   },
+   {
+    "lo": 1000000.0,
+    "hi": 3000000.0,
+    "n": 261203,
+    "cl": 0.05552959069609642,
+    "cd": 0.004525361582636833
+   },
+   {
+    "lo": 3000000.0,
+    "hi": 21000000.0,
+    "n": 1452360,
+    "cl": 0.05432850494980812,
+    "cd": 0.003324521705508232
+   }
+  ],
+  "ar_by_mach": [
+   {
+    "lo": -0.01,
+    "hi": 0.05,
+    "n": 636250,
+    "cl": 0.05495419353246689,
+    "cd": 0.003805748885497451
+   },
+   {
+    "lo": 0.05,
+    "hi": 0.15,
+    "n": 629490,
+    "cl": 0.0568397082388401,
+    "cd": 0.0040478878654539585
+   },
+   {
+    "lo": 0.15,
+    "hi": 0.3,
+    "n": 616820,
+    "cl": 0.06445572525262833,
+    "cd": 0.005197304300963879
+   },
+   {
+    "lo": 0.3,
+    "hi": 0.51,
+    "n": 544984,
+    "cl": 0.06533399224281311,
+    "cd": 0.005304434802383184
+   }
+  ]
+ },
+ "latency": {
+  "cpu_b1_1thread_ms": {
+   "median": 0.7860000478103757,
+   "p90": 0.9302543010562658
+  },
+  "fused_cpp_b1_us": {
+   "full_median": 62.000006437301636,
+   "geom_cached_median": 47.79198206961155,
+   "max_abs_diff_vs_torch": 6.213784217834473e-06
+  },
+  "cpu_batched_us_per_polar": {
+   "bs": 512,
+   "us": 121.76211748737842
+  },
+  "mps_batched_us_per_polar": {
+   "bs": 1024,
+   "us": 25.6234781772946
+  }
+ },
+ "train": {
+  "epoch": 159,
+  "val_causal": {
+   "loss": 0.27403734712039723,
+   "cl": 0.06099599227309227,
+   "cd": 0.0046300399117171764,
+   "stall_cl": 0.06551909446716309,
+   "stall_cd": 0.0076934900134801865
+  },
+  "variant": {
+   "id": 74,
+   "slug": "v61_d16",
+   "name": "v61 stack at d=16 (embeddings learned from scratch)"
+  }
+ }
+}

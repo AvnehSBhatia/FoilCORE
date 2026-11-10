@@ -1,0 +1,37 @@
+% NeurIPS 2026 paper checklist for the FMTS camera-ready. Does not count toward the page limit.
+\section*{NeurIPS Paper Checklist}
+\begin{enumerate}\small
+
+\item {\bf Claims.} \answerYes{} The abstract and \S\ref{sec:intro} claim a leakage diagnosis and a training recipe whose dual-mask models stay within 2\% between modes on the public tasks (Figure~\ref{fig:protocols}, Table~\ref{tab:transfer}) and on the airfoil (Table~\ref{tab:main}); the leak-fraction sweep (\S\ref{sec:sweep}) supports the claim that leakage raises error in both modes; the smoothing cost where future context matters (4.07 vs.\ 4.78) is stated in the abstract, \S\ref{sec:transfer} and \S\ref{sec:limits}.
+
+\item {\bf Limitations.} \answerYes{} \S\ref{sec:limits}: simulated airfoil labels (XFOIL, ncrit\,=\,9), one small model per public dataset, zero-shot foundation-model rows on a different information set, single-run ablations, a smoother cost in one cell.
+
+\item {\bf Theory assumptions and proofs.} \answerYes{} Proposition~1 states its Lipschitz assumption and has a complete one-line proof; Proposition~2 is a property of the objective. Both are presented as explanations, not guarantees that the two modes agree.
+
+\item {\bf Experimental result reproducibility.} \answerYes{} Appendix~\ref{app:transfer} (public tasks) and Appendix~\ref{app:case} (airfoil) give model, loss, optimizer, splits, normalization and stopping rules.
+
+\item {\bf Open access to data and code.} \answerYes{} Code, weights, split manifests and every reported number: \url{https://github.com/AvnehSBhatia/FoilCORE}. ETTh1, Beijing PM2.5 and MIT-BIH are public and downloaded by the released loaders.
+
+\item {\bf Experimental setting/details.} \answerYes{} Appendices~\ref{app:transfer}--\ref{app:case}.
+
+\item {\bf Experiment statistical significance.} \answerYes{} Public-task and leak-sweep cells are means of three seeds (standard deviations in the released summaries); the main airfoil model is three seeds. \answerNo{} for the single-run airfoil ablations, which the paper labels as such.
+
+\item {\bf Experiments compute resources.} \answerYes{} Appendix~\ref{app:transfer} and Appendix~\ref{app:case} give hardware and run times; latency is one CPU thread.
+
+\item {\bf Code of ethics.} \answerYes{} The work conforms to the NeurIPS Code of Ethics.
+
+\item {\bf Broader impacts.} \answerYes{} The recipe reduces model storage on small devices. A wrong polar in stall is a bad control input; the paper reports the stall slice separately and does not propose certifying a vehicle on the model.
+
+\item {\bf Safeguards.} \answerNA{} No high-risk models or scraped data are released.
+
+\item {\bf Licenses for existing assets.} \answerYes{} ETTh1 (CC BY-ND 4.0), Beijing PM2.5 (UCI, CC BY 4.0), MIT-BIH (PhysioNet, ODC-By 1.0), XFOIL (GPL), NeuralFoil (MIT), Chronos, TimesFM and TinyTimeMixer (Apache 2.0) are cited.
+
+\item {\bf New assets.} \answerYes{} The released code, weights and split manifests are documented in the repository README.
+
+\item {\bf Crowdsourcing and research with human subjects.} \answerNA{}
+
+\item {\bf IRB approvals.} \answerNA{} MIT-BIH is a de-identified public database; no new human-subject data were collected.
+
+\item {\bf Declaration of LLM usage.} \answerYes{} An LLM coding assistant was used to write and refactor experiment code and to edit the manuscript. It is not part of the method; all experiments, numbers and claims were checked by the author.
+
+\end{enumerate}

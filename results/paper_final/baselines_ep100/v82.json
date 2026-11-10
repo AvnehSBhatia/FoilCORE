@@ -1,0 +1,244 @@
+{
+ "ckpt": "results/pod_runs/20260819_001018_v82/foilcore_epoch_100.pt",
+ "n_params": 5300,
+ "param_breakdown": {
+  "path": 416,
+  "geom_encoder": 96,
+  "mem_mix": 416,
+  "head": 66,
+  "profile_in": 672,
+  "polar_in": 192,
+  "bb_in": 528,
+  "backbone": 2880,
+  "bb_head": 34
+ },
+ "config": {
+  "d_model": 32,
+  "d_geom": 32,
+  "model_type": "seqbaseline",
+  "num_blocks": 2,
+  "block_mode": "all_alt",
+  "shared_qk_scalars": true,
+  "path_mode": "full",
+  "share_path": true,
+  "n_path_terms": 4,
+  "outer_layers": 0,
+  "dropout": 0.05,
+  "residual": true,
+  "use_causal_mask": false,
+  "decoder_hidden": 0,
+  "output_dims": 2,
+  "mlp_hidden": 32,
+  "n_heads": 2,
+  "le_xmax": 0.25,
+  "te_xmin": 0.75,
+  "draft_loss_weight": 0.25,
+  "n_geom_memories": 3,
+  "n_landmarks": 4,
+  "contour_bidirectional": true,
+  "contour_d_cond": 3,
+  "contour_log_a_init": "const",
+  "contour_mode": "ssm",
+  "directional_landmarks": false,
+  "landmark_mean": false,
+  "mem_log_a_init": -0.5,
+  "polar_mixer": "iir_clcd",
+  "iir_tau_init": "const",
+  "polar_in_clcd": true,
+  "polar_alpha_sinus": true,
+  "err_head_hidden": 16,
+  "err_head_mem_dim": 4,
+  "router_threshold": 0.5,
+  "use_stall_router": true,
+  "use_selective_ssm": true,
+  "use_local_kernel": true,
+  "use_err_head": false,
+  "profile_stations": 10,
+  "moe_experts": 0,
+  "geom_pool": "region3",
+  "softbin_k": 4,
+  "use_err_expert": false,
+  "err_expert_hidden": 16,
+  "seq_backbone": "mamba",
+  "bb_d": 16,
+  "bb_layers": 2,
+  "bb_t_max": 96,
+  "bb_inner": 16,
+  "bb_state": 8
+ },
+ "accuracy": {
+  "n_rows": 34043,
+  "n_points": 2427544,
+  "ar": {
+   "cl": 0.056466251611709595,
+   "cd": 0.004203352145850658,
+   "stall_cl": 0.062296316027641296,
+   "stall_cd": 0.006930843461304903,
+   "linear_cl": 0.053067754954099655,
+   "linear_cd": 0.0026134203653782606
+  },
+  "tf": {
+   "cl": 0.05664531886577606,
+   "cd": 0.004187791608273983,
+   "stall_cl": 0.06171741336584091,
+   "stall_cd": 0.006903752218931913,
+   "linear_cl": 0.0536886602640152,
+   "linear_cd": 0.002604581881314516
+  },
+  "seeded1": {
+   "cl": 0.056466251611709595,
+   "cd": 0.004203352145850658,
+   "stall_cl": 0.062296316027641296,
+   "stall_cd": 0.006930843461304903,
+   "linear_cl": 0.053067754954099655,
+   "linear_cd": 0.0026134203653782606
+  },
+  "draft": {
+   "cl": 0.10705659538507462,
+   "cd": 0.013728410005569458
+  },
+  "ar_by_alpha": [
+   {
+    "lo": -20.0,
+    "hi": -12.0,
+    "n": 380602,
+    "cl": 0.06496025621891022,
+    "cd": 0.007125570438802242
+   },
+   {
+    "lo": -12.0,
+    "hi": -6.0,
+    "n": 419212,
+    "cl": 0.05748915672302246,
+    "cd": 0.004070695023983717
+   },
+   {
+    "lo": -6.0,
+    "hi": 0.0,
+    "n": 392415,
+    "cl": 0.04301541671156883,
+    "cd": 0.0016563145909458399
+   },
+   {
+    "lo": 0.0,
+    "hi": 6.0,
+    "n": 359950,
+    "cl": 0.05163755267858505,
+    "cd": 0.0016350632067769766
+   },
+   {
+    "lo": 6.0,
+    "hi": 12.0,
+    "n": 392893,
+    "cl": 0.060337845236063004,
+    "cd": 0.003133828518912196
+   },
+   {
+    "lo": 12.0,
+    "hi": 20.1,
+    "n": 463413,
+    "cl": 0.05894334241747856,
+    "cd": 0.006633853539824486
+   }
+  ],
+  "ar_by_re": [
+   {
+    "lo": 40000.0,
+    "hi": 100000.0,
+    "n": 111586,
+    "cl": 0.10156041383743286,
+    "cd": 0.010185564868152142
+   },
+   {
+    "lo": 100000.0,
+    "hi": 300000.0,
+    "n": 223263,
+    "cl": 0.07997777312994003,
+    "cd": 0.007655169349163771
+   },
+   {
+    "lo": 300000.0,
+    "hi": 1000000.0,
+    "n": 379132,
+    "cl": 0.052283402532339096,
+    "cd": 0.004928125999867916
+   },
+   {
+    "lo": 1000000.0,
+    "hi": 3000000.0,
+    "n": 261203,
+    "cl": 0.052562564611434937,
+    "cd": 0.004127589054405689
+   },
+   {
+    "lo": 3000000.0,
+    "hi": 21000000.0,
+    "n": 1452360,
+    "cl": 0.05118132755160332,
+    "cd": 0.003037532325834036
+   }
+  ],
+  "ar_by_mach": [
+   {
+    "lo": -0.01,
+    "hi": 0.05,
+    "n": 636250,
+    "cl": 0.05299504101276398,
+    "cd": 0.003428171155974269
+   },
+   {
+    "lo": 0.05,
+    "hi": 0.15,
+    "n": 629490,
+    "cl": 0.05330910161137581,
+    "cd": 0.003693706588819623
+   },
+   {
+    "lo": 0.15,
+    "hi": 0.3,
+    "n": 616820,
+    "cl": 0.059694014489650726,
+    "cd": 0.004759743809700012
+   },
+   {
+    "lo": 0.3,
+    "hi": 0.51,
+    "n": 544984,
+    "cl": 0.06051227077841759,
+    "cd": 0.005067289806902409
+   }
+  ]
+ },
+ "latency": {
+  "cpu_b1_1thread_ms": {
+   "median": 1.3801464810967445,
+   "p90": 1.6149702481925485
+  },
+  "fused_cpp_b1_us": {
+   "error": "unsupported config"
+  },
+  "cpu_batched_us_per_polar": {
+   "bs": 256,
+   "us": 230.54170724208234
+  },
+  "mps_batched_us_per_polar": {
+   "bs": 1024,
+   "us": 49.55483193498367
+  }
+ },
+ "train": {
+  "epoch": 100,
+  "val_causal": {
+   "loss": 0.23045367046314127,
+   "cl": 0.05669914931058884,
+   "cd": 0.004290205426514149,
+   "stall_cl": 0.06222861260175705,
+   "stall_cd": 0.0070536015555262566
+  },
+  "variant": {
+   "id": 82,
+   "slug": "seq_mamba",
+   "name": "Baseline: FoilCORE front-end + 2-layer minimal Mamba (S6) backbone"
+  }
+ }
+}

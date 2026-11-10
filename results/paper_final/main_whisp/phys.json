@@ -1,0 +1,256 @@
+{
+ "ckpt": "checkpoints/whisp2_combo_seed1/foilcore_best.pt",
+ "n_params": 5803,
+ "param_breakdown": {
+  "base_scale": 1,
+  "alpha_stall_base": 1,
+  "w_r_le": 1,
+  "path": 416,
+  "geom_encoder": 96,
+  "mem_mix": 416,
+  "head": 66,
+  "inv_in": 224,
+  "cd0_head": 33,
+  "k_head": 33,
+  "gate_head": 33,
+  "err_head": 582,
+  "polar_in": 384,
+  "profile_in": 672,
+  "err_expert": 597,
+  "agent": 2248
+ },
+ "config": {
+  "d_model": 32,
+  "d_geom": 32,
+  "model_type": "foilcore",
+  "num_blocks": 2,
+  "block_mode": "all_alt",
+  "shared_qk_scalars": true,
+  "path_mode": "full",
+  "share_path": true,
+  "n_path_terms": 4,
+  "outer_layers": 0,
+  "dropout": 0.05,
+  "residual": true,
+  "use_causal_mask": false,
+  "phys_residual": true,
+  "phys_residual_gated": true,
+  "phys_base": true,
+  "invariant_memory": true,
+  "bl_features": true,
+  "cl_mu": 0.3108636894251138,
+  "cl_sd": 0.9215299783366676,
+  "cd_mu": 0.042475527658563876,
+  "cd_sd": 0.05765827607377078,
+  "a_mu": 0.4187265454209568,
+  "a_sd": 10.8993822859059,
+  "m_mu": 0.2025866020029599,
+  "m_sd": 0.1843156205575277,
+  "re_mu": 6741667.469853001,
+  "re_sd": 6296714.207675727,
+  "decoder_hidden": 0,
+  "output_dims": 2,
+  "mlp_hidden": 32,
+  "n_heads": 2,
+  "le_xmax": 0.25,
+  "te_xmin": 0.75,
+  "draft_loss_weight": 0.25,
+  "n_geom_memories": 3,
+  "n_landmarks": 4,
+  "contour_bidirectional": true,
+  "contour_d_cond": 3,
+  "contour_log_a_init": "const",
+  "contour_mode": "ssm",
+  "directional_landmarks": false,
+  "landmark_mean": false,
+  "mem_log_a_init": -0.5,
+  "polar_mixer": "iir_clcd",
+  "iir_tau_init": "const",
+  "polar_in_clcd": true,
+  "polar_alpha_sinus": true,
+  "err_head_hidden": 16,
+  "err_head_mem_dim": 4,
+  "router_threshold": 0.5,
+  "use_stall_router": true,
+  "use_selective_ssm": true,
+  "use_local_kernel": true,
+  "use_err_head": true,
+  "profile_stations": 10,
+  "moe_experts": 0,
+  "geom_pool": "region3",
+  "softbin_k": 4,
+  "use_err_expert": true,
+  "err_expert_hidden": 16
+ },
+ "accuracy": {
+  "n_rows": 4096,
+  "n_points": 275747,
+  "ar": {
+   "cl": 0.03981086611747742,
+   "cd": 0.0032521910034120083,
+   "stall_cl": 0.048177570104599,
+   "stall_cd": 0.0056917499750852585,
+   "linear_cl": 0.035060517489910126,
+   "linear_cd": 0.0018670855788514018
+  },
+  "tf": {
+   "cl": 0.03956606239080429,
+   "cd": 0.003215847071260214,
+   "stall_cl": 0.04732895269989967,
+   "stall_cd": 0.005604051984846592,
+   "linear_cl": 0.03515853360295296,
+   "linear_cd": 0.0018598987953737378
+  },
+  "seeded1": {
+   "cl": 0.0412321612238884,
+   "cd": 0.0033863955177366734,
+   "stall_cl": 0.05164582282304764,
+   "stall_cd": 0.006038053426891565,
+   "linear_cl": 0.03531961143016815,
+   "linear_cd": 0.0018808671738952398
+  },
+  "draft": {
+   "cl": 0.10169437527656555,
+   "cd": 0.007252749986946583
+  },
+  "ar_by_alpha": [
+   {
+    "lo": -20.0,
+    "hi": -12.0,
+    "n": 42109,
+    "cl": 0.05220138654112816,
+    "cd": 0.006386111956089735
+   },
+   {
+    "lo": -12.0,
+    "hi": -6.0,
+    "n": 42735,
+    "cl": 0.038429178297519684,
+    "cd": 0.003357430687174201
+   },
+   {
+    "lo": -6.0,
+    "hi": 0.0,
+    "n": 44399,
+    "cl": 0.03156028687953949,
+    "cd": 0.001418592408299446
+   },
+   {
+    "lo": 0.0,
+    "hi": 6.0,
+    "n": 46489,
+    "cl": 0.0352257564663887,
+    "cd": 0.0009907966013997793
+   },
+   {
+    "lo": 6.0,
+    "hi": 12.0,
+    "n": 45665,
+    "cl": 0.035730212926864624,
+    "cd": 0.0019884309731423855
+   },
+   {
+    "lo": 12.0,
+    "hi": 20.1,
+    "n": 52232,
+    "cl": 0.04424920678138733,
+    "cd": 0.0050562238320708275
+   }
+  ],
+  "ar_by_re": [
+   {
+    "lo": 40000.0,
+    "hi": 100000.0,
+    "n": 13600,
+    "cl": 0.07181935012340546,
+    "cd": 0.006259245332330465
+   },
+   {
+    "lo": 100000.0,
+    "hi": 300000.0,
+    "n": 27651,
+    "cl": 0.056334927678108215,
+    "cd": 0.0050316196866333485
+   },
+   {
+    "lo": 300000.0,
+    "hi": 1000000.0,
+    "n": 29692,
+    "cl": 0.040363021194934845,
+    "cd": 0.003912133164703846
+   },
+   {
+    "lo": 1000000.0,
+    "hi": 3000000.0,
+    "n": 30041,
+    "cl": 0.03810126706957817,
+    "cd": 0.003776696277782321
+   },
+   {
+    "lo": 3000000.0,
+    "hi": 21000000.0,
+    "n": 174763,
+    "cl": 0.03490560129284859,
+    "cd": 0.0025343582965433598
+   }
+  ],
+  "ar_by_mach": [
+   {
+    "lo": -0.01,
+    "hi": 0.05,
+    "n": 74314,
+    "cl": 0.03755013644695282,
+    "cd": 0.0028401005547493696
+   },
+   {
+    "lo": 0.05,
+    "hi": 0.15,
+    "n": 72648,
+    "cl": 0.03693070635199547,
+    "cd": 0.0029587766621261835
+   },
+   {
+    "lo": 0.15,
+    "hi": 0.3,
+    "n": 68236,
+    "cl": 0.04213666170835495,
+    "cd": 0.0037949245888739824
+   },
+   {
+    "lo": 0.3,
+    "hi": 0.51,
+    "n": 60549,
+    "cl": 0.04342015087604523,
+    "cd": 0.0034983730874955654
+   }
+  ]
+ },
+ "latency": {
+  "cpu_b1_1thread_ms": {
+   "median": 5.796086508780718,
+   "p90": 5.9488387778401375
+  },
+  "fused_cpp_b1_us": {
+   "error": "Error building extension 'foilcore_fused_forward': [1/2] c++ -MMD -MF main.o.d -DTORCH_EXTENSION_NAME=foilcore_fused_forward -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\\\"_gcc\\\" -DPYBIND1"
+  },
+  "cpu_batched_us_per_polar": {
+   "bs": 512,
+   "us": 981.9647124459153
+  }
+ },
+ "train": {
+  "epoch": 305,
+  "val_causal": {
+   "loss": 0.18103063922552837,
+   "cl": 0.04036913812160492,
+   "cd": 0.0033305021934211254,
+   "stall_cl": 0.04842618107795715,
+   "stall_cd": 0.005725174210965633
+  },
+  "variant": {
+   "id": 61,
+   "slug": "ref_ar_eqw_errhead_profile_expert",
+   "name": "FoilCORE + error head + profile memory + \u00ea-gated residual expert"
+  }
+ }
+}

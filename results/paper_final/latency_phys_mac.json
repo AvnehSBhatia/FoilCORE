@@ -1,0 +1,23 @@
+{
+  "v61_trunk_5285": {
+    "n_params": 5285,
+    "full_median_us": 82.83299393951893,
+    "cached_median_us": 59.66611206531525,
+    "full_p90_us": 88.5410699993372,
+    "max_abs_diff_vs_torch": 1.7881393432617188e-06
+  },
+  "v61_physinv_5576": {
+    "n_params": 5576,
+    "full_median_us": 91.54097642749548,
+    "cached_median_us": 68.12496576458216,
+    "full_p90_us": 98.04605506360532,
+    "max_abs_diff_vs_torch": 1.6689300537109375e-06
+  },
+  "v61_combo_5803": {
+    "n_params": 5803,
+    "full_median_us": 98.95791299641132,
+    "cached_median_us": 75.54097101092339,
+    "full_p90_us": 106.41710832715034,
+    "max_abs_diff_vs_torch": 5.0067901611328125e-06
+  }
+}

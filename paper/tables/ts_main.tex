@@ -1,0 +1,19 @@
+\begin{tabular}{lrrrrrrl}
+\toprule
+Model & Params & $C_l$ & $C_d$ (stall) & smooth.\ $C_l$/$C_d$ & MACs/pt & latency & framework \\
+\midrule
+FoilCORE-5k (ours) & 5,285 & 0.046 & 0.0036 (0.0060) & 0.046 / 0.0036 & 12.8k & 81\,$\mu$s & C++ kernel \\
+FoilCORE-2k ($d{=}16$) & 2,373 & 0.057 & 0.0044 (0.0073) & 0.058 / 0.0043 & 6.1k & 61\,$\mu$s & C++ kernel \\
+FoilCORE-3k (plain) & 3,434 & 0.076 & 0.0052 (0.0089) & 0.075 / 0.0052 & 11.8k & 67\,$\mu$s & C++ kernel \\
+FoilCORE-0.5k ($d{=}8$) & 482 & 0.100 & 0.0083 (0.0129) & 0.100 / 0.0084 & 2.6k & 38\,$\mu$s & C++ kernel \\
+3k, label-leaking & 3,434 & 0.137 & 0.0107 (0.0180) & 0.129 / 0.0082 & 11.8k & 68\,$\mu$s & C++ kernel \\
+\midrule
+\multicolumn{8}{l}{\emph{Same front-end and protocol, standard backbone as corrector:}} \\
+\quad Transformer & 5,822 & 0.048 & 0.0037 (0.0061) & 0.047 / 0.0036 & 8.1k & 166\,$\mu$s & C++ kernel \\
+\quad TSMixer & 11,780 & 0.061 & 0.0046 (0.0075) & 0.061 / 0.0045 & 2.4k$^{\ast}$ & 50\,$\mu$s & C++ kernel \\
+\quad Mamba (S6) & 5,300 & 0.049 & 0.0038 (0.0063) & 0.049 / 0.0038 & 3.7k$^{\ast}$ & 122\,$\mu$s & C++ kernel \\
+\midrule
+NeuralFoil xxsmall & 13,302 & 0.092 & 0.0128 (0.0256) & -- & 26k & 0.57\,ms & NumPy \\
+NeuralFoil xxxlarge & 1,428,166 & 0.082 & 0.0115 (0.0239) & -- & 2.9M & 4.63\,ms & NumPy \\
+\bottomrule
+\end{tabular}

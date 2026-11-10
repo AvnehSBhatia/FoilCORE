@@ -1,0 +1,20 @@
+[fast_train] device cuda  variant 72
+[fast_train] FoilCORE d=16 with 4-expert MoE corrector blocks [ref_ar_eqw_d16_moe4]
+[fast_train] loaded tensor cache train_tensors_a7e83aef8d.pt: 272748 rows, T_max=81
+[fast_train] loaded tensor cache val_tensors_3882da134e.pt: 34344 rows, T_max=81
+[fast_train] loaded 0 geom encoder tensors
+[fast_train] 3002 params  bs=1024  lr=0.0003  compile=True  bf16=False
+W0818 04:54:07.557000 63875 torch/_inductor/utils.py:1436] [2/0_1] Not enough SMs to use max_autotune_gemm mode
+Epoch   1/100 | 213s+16s | train L 1.9228 (Cl 0.7553 Cd 0.7522) | val AR L 1.7987 Cl 0.6397 Cd 0.04024 stallCd 0.05308 | TF Cl 0.6383 Cd 0.04020 | lr 6.00e-05
+Epoch   2/100 | 65s+16s | train L 1.5900 (Cl 0.5164 Cd 0.6709) | val AR L 1.3456 Cl 0.3109 Cd 0.03542 stallCd 0.05645 | TF Cl 0.3087 Cd 0.03551 | lr 1.20e-04
+Epoch   3/100 | 65s+17s | train L 1.1593 (Cl 0.2624 Cd 0.5304) | val AR L 0.9814 Cl 0.2192 Cd 0.02281 stallCd 0.04211 | TF Cl 0.2197 Cd 0.02289 | lr 1.80e-04
+Epoch   4/100 | 65s+16s | train L 0.8930 (Cl 0.2203 Cd 0.3542) | val AR L 0.8072 Cl 0.1958 Cd 0.01699 stallCd 0.02960 | TF Cl 0.1948 Cd 0.01696 | lr 2.40e-04
+Epoch   5/100 | 65s+17s | train L 0.7666 (Cl 0.2086 Cd 0.2936) | val AR L 0.7119 Cl 0.1932 Cd 0.01537 stallCd 0.02702 | TF Cl 0.1916 Cd 0.01530 | lr 3.00e-04
+Epoch   6/100 | 65s+16s | train L 0.6922 (Cl 0.2057 Cd 0.2727) | val AR L 0.6589 Cl 0.1885 Cd 0.01435 stallCd 0.02468 | TF Cl 0.1906 Cd 0.01437 | lr 3.00e-04
+Epoch   7/100 | 65s+16s | train L 0.6573 (Cl 0.2029 Cd 0.2609) | val AR L 0.6378 Cl 0.1876 Cd 0.01391 stallCd 0.02397 | TF Cl 0.1869 Cd 0.01384 | lr 3.00e-04
+Epoch   8/100 | 65s+16s | train L 0.6368 (Cl 0.2002 Cd 0.2528) | val AR L 0.6247 Cl 0.1881 Cd 0.01357 stallCd 0.02335 | TF Cl 0.1860 Cd 0.01342 | lr 3.00e-04
+Epoch   9/100 | 65s+16s | train L 0.6220 (Cl 0.1978 Cd 0.2466) | val AR L 0.6095 Cl 0.1854 Cd 0.01318 stallCd 0.02284 | TF Cl 0.1845 Cd 0.01322 | lr 3.00e-04
+Epoch  10/100 | 65s+16s | train L 0.6109 (Cl 0.1963 Cd 0.2420) | val AR L 0.5995 Cl 0.1837 Cd 0.01299 stallCd 0.02249 | TF Cl 0.1836 Cd 0.01314 | lr 3.00e-04
+Epoch  11/100 | 65s+17s | train L 0.6012 (Cl 0.1949 Cd 0.2380) | val AR L 0.5966 Cl 0.1849 Cd 0.01292 stallCd 0.02241 | TF Cl 0.1835 Cd 0.01285 | lr 3.00e-04
+Epoch  12/100 | 64s+16s | train L 0.5939 (Cl 0.1937 Cd 0.2351) | val AR L 0.5894 Cl 0.1833 Cd 0.01279 stallCd 0.02229 | TF Cl 0.1825 Cd 0.01277 | lr 3.00e-04
+Epoch  13/100 | 65s+16s | train L 0.5874 (Cl 0.1927 Cd 0.2325) | val AR L 0.5859 Cl 0.1824 Cd 0.01288 stallCd 0.02221 | TF Cl 0.1813 Cd 0.01275 | lr 3.00e-04

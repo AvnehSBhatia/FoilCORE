@@ -1,0 +1,17 @@
+\begin{tabular}{lrrrrrr}
+\toprule
+Training protocol & \multicolumn{2}{c}{ETTh1 oil temp.\ ($^\circ$C)} & \multicolumn{2}{c}{Beijing PM2.5 (log)} & \multicolumn{2}{c}{MIT-BIH lead II (mV)} \\
+ & stream & smooth & stream & smooth & stream & smooth \\
+\midrule
+label-leaking (sched.\ sampling) & 5.52\,{\scriptsize$\pm$0.35} & 5.27\,{\scriptsize$\pm$0.37} & 0.590\,{\scriptsize$\pm$0.026} & 0.502\,{\scriptsize$\pm$0.004} & 0.300\,{\scriptsize$\pm$0.013} & 0.289\,{\scriptsize$\pm$0.014} \\
+draft-only, causal & 5.19\,{\scriptsize$\pm$0.17} & 5.30\,{\scriptsize$\pm$0.13} & 0.489\,{\scriptsize$\pm$0.009} & 0.515\,{\scriptsize$\pm$0.008} & 0.229\,{\scriptsize$\pm$0.001} & 0.226\,{\scriptsize$\pm$0.003} \\
+draft-only, bidirectional & 5.26\,{\scriptsize$\pm$0.13} & 5.30\,{\scriptsize$\pm$0.11} & 0.600\,{\scriptsize$\pm$0.012} & 0.499\,{\scriptsize$\pm$0.007} & 0.257\,{\scriptsize$\pm$0.011} & 0.233\,{\scriptsize$\pm$0.004} \\
+draft-only, dual mask (ours) & 5.30\,{\scriptsize$\pm$0.17} & 5.38\,{\scriptsize$\pm$0.09} & 0.494\,{\scriptsize$\pm$0.009} & 0.503\,{\scriptsize$\pm$0.005} & 0.229\,{\scriptsize$\pm$0.003} & 0.228\,{\scriptsize$\pm$0.003} \\
+\midrule
+\multicolumn{7}{l}{\emph{Same, with a transformer corrector in place of ours:}} \\
+\quad label-leaking & 6.03\,{\scriptsize$\pm$0.26} & 5.69\,{\scriptsize$\pm$0.04} & 0.732\,{\scriptsize$\pm$0.051} & 0.582\,{\scriptsize$\pm$0.092} & 0.297\,{\scriptsize$\pm$0.004} & 0.295\,{\scriptsize$\pm$0.004} \\
+\quad draft-only, causal & 4.62\,{\scriptsize$\pm$0.58} & 4.67\,{\scriptsize$\pm$0.71} & 0.487\,{\scriptsize$\pm$0.007} & 0.581\,{\scriptsize$\pm$0.022} & 0.227\,{\scriptsize$\pm$0.005} & 0.229\,{\scriptsize$\pm$0.001} \\
+\quad draft-only, bidirectional & 4.67\,{\scriptsize$\pm$0.54} & 4.07\,{\scriptsize$\pm$0.55} & 0.628\,{\scriptsize$\pm$0.034} & 0.494\,{\scriptsize$\pm$0.003} & 0.246\,{\scriptsize$\pm$0.015} & 0.220\,{\scriptsize$\pm$0.002} \\
+\quad draft-only, dual mask & 4.70\,{\scriptsize$\pm$0.56} & 4.78\,{\scriptsize$\pm$0.73} & 0.492\,{\scriptsize$\pm$0.004} & 0.497\,{\scriptsize$\pm$0.003} & 0.223\,{\scriptsize$\pm$0.002} & 0.220\,{\scriptsize$\pm$0.004} \\
+\bottomrule
+\end{tabular}

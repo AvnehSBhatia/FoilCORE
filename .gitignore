@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Data (not redistributed; rebuild with tools/build_bigfoil_dataset.py)
+*.csv
+data/.aero_cache/
+
+# Local tex env / junk
+.conda-tex/
+
+# Training / benchmark outputs
+outputs/
+plots/
+
+# LaTeX build artifacts
+paper/*.aux
+paper/*.log
+paper/*.blg
+paper/*.out
+paper/fmts/*.aux
+paper/fmts/*.log
+paper/fmts/*.blg
+paper/fmts/*.out
+paper/fmts/*.bbl
+
+# OS
+.DS_Store
+
+# JIT-built C++ extensions (rebuilt automatically by src/fused_scan.py, src/fused_forward.py)
+build/
+
+# local training / experiment outputs (mirror the keepers into results/)
+runs/
+experiments/transfer/data/
+
+# Data: CSVs are rebuilt with tools/build_bigfoil_dataset.py; data/split_manifest.json is tracked
+
+# logs (LaTeX, local runs)
+*.log

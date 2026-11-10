@@ -1,0 +1,26 @@
+model:
+  name: "FoilCORE"
+  d_model: 8
+
+training:
+  batch_size: 32
+  lr: 3e-4
+  weight_decay: 1e-4
+  epochs: 100
+  grad_clip: 1.0
+  warmup_epochs: 10
+
+pretraining:
+  batch_size: 64
+  lr: 1e-3
+  epochs: 50
+  warmup_epochs: 5
+
+data:
+  train_path: data/train.csv
+  val_path: data/val.csv
+  n_points: 200
+  n_geom_patches: 20
+  points_per_patch: 10
+  d_polar: 5
+  d_geom: 20

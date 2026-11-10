@@ -1,0 +1,744 @@
+{
+ "csv": "data/test.csv",
+ "n_rows": 40000,
+ "models": {
+  "v80": {
+   "ckpt": "results/pod_runs/20260819_001018_v80/foilcore_best.pt",
+   "n_params": 5822,
+   "param_breakdown": {
+    "path": 416,
+    "geom_encoder": 96,
+    "mem_mix": 416,
+    "head": 66,
+    "profile_in": 672,
+    "polar_in": 192,
+    "bb_in": 462,
+    "backbone": 3472,
+    "bb_head": 30
+   },
+   "config": {
+    "d_model": 32,
+    "d_geom": 32,
+    "model_type": "seqbaseline",
+    "num_blocks": 2,
+    "block_mode": "all_alt",
+    "shared_qk_scalars": true,
+    "path_mode": "full",
+    "share_path": true,
+    "n_path_terms": 4,
+    "outer_layers": 0,
+    "dropout": 0.05,
+    "residual": true,
+    "use_causal_mask": false,
+    "decoder_hidden": 0,
+    "output_dims": 2,
+    "mlp_hidden": 32,
+    "n_heads": 2,
+    "le_xmax": 0.25,
+    "te_xmin": 0.75,
+    "draft_loss_weight": 0.25,
+    "n_geom_memories": 3,
+    "n_landmarks": 4,
+    "contour_bidirectional": true,
+    "contour_d_cond": 3,
+    "contour_log_a_init": "const",
+    "contour_mode": "ssm",
+    "directional_landmarks": false,
+    "landmark_mean": false,
+    "mem_log_a_init": -0.5,
+    "polar_mixer": "iir_clcd",
+    "iir_tau_init": "const",
+    "polar_in_clcd": true,
+    "polar_alpha_sinus": true,
+    "err_head_hidden": 16,
+    "err_head_mem_dim": 4,
+    "router_threshold": 0.5,
+    "use_stall_router": true,
+    "use_selective_ssm": true,
+    "use_local_kernel": true,
+    "use_err_head": false,
+    "profile_stations": 10,
+    "moe_experts": 0,
+    "geom_pool": "region3",
+    "softbin_k": 4,
+    "use_err_expert": false,
+    "err_expert_hidden": 16,
+    "seq_backbone": "transformer",
+    "bb_d": 14,
+    "bb_layers": 2,
+    "bb_t_max": 96,
+    "bb_inner": 24,
+    "bb_state": 8
+   },
+   "accuracy": {
+    "n_rows": 34043,
+    "n_points": 2427544,
+    "ar": {
+     "cl": 0.047772929072380066,
+     "cd": 0.00366947241127491,
+     "stall_cl": 0.05429873988032341,
+     "stall_cd": 0.006142718251794577,
+     "linear_cl": 0.04396885633468628,
+     "linear_cd": 0.0022277473472058773
+    },
+    "tf": {
+     "cl": 0.047376733273267746,
+     "cd": 0.003603860968723893,
+     "stall_cl": 0.05355655029416084,
+     "stall_cd": 0.006056392565369606,
+     "linear_cl": 0.04377433657646179,
+     "linear_cd": 0.0021742109674960375
+    },
+    "seeded1": {
+     "cl": 0.047772929072380066,
+     "cd": 0.00366947241127491,
+     "stall_cl": 0.05429873988032341,
+     "stall_cd": 0.006142718251794577,
+     "linear_cl": 0.04396885633468628,
+     "linear_cd": 0.0022277473472058773
+    },
+    "draft": {
+     "cl": 0.09422556310892105,
+     "cd": 0.01171578373759985
+    },
+    "ar_by_alpha": [
+     {
+      "lo": -20.0,
+      "hi": -12.0,
+      "n": 380602,
+      "cl": 0.0601322166621685,
+      "cd": 0.006822651717811823
+     },
+     {
+      "lo": -12.0,
+      "hi": -6.0,
+      "n": 419212,
+      "cl": 0.05091987922787666,
+      "cd": 0.0036064910236746073
+     },
+     {
+      "lo": -6.0,
+      "hi": 0.0,
+      "n": 392415,
+      "cl": 0.03773139417171478,
+      "cd": 0.0014817663468420506
+     },
+     {
+      "lo": 0.0,
+      "hi": 6.0,
+      "n": 359950,
+      "cl": 0.04318283125758171,
+      "cd": 0.0013310698559507728
+     },
+     {
+      "lo": 6.0,
+      "hi": 12.0,
+      "n": 392893,
+      "cl": 0.04444553703069687,
+      "cd": 0.002529369667172432
+     },
+     {
+      "lo": 12.0,
+      "hi": 20.1,
+      "n": 463413,
+      "cl": 0.048502303659915924,
+      "cd": 0.005484342575073242
+     }
+    ],
+    "ar_by_re": [
+     {
+      "lo": 40000.0,
+      "hi": 100000.0,
+      "n": 111586,
+      "cl": 0.09420596808195114,
+      "cd": 0.008203526958823204
+     },
+     {
+      "lo": 100000.0,
+      "hi": 300000.0,
+      "n": 223263,
+      "cl": 0.07269309461116791,
+      "cd": 0.006293972954154015
+     },
+     {
+      "lo": 300000.0,
+      "hi": 1000000.0,
+      "n": 379132,
+      "cl": 0.04692056030035019,
+      "cd": 0.004593266174197197
+     },
+     {
+      "lo": 1000000.0,
+      "hi": 3000000.0,
+      "n": 261203,
+      "cl": 0.044461607933044434,
+      "cd": 0.0037689406890422106
+     },
+     {
+      "lo": 3000000.0,
+      "hi": 21000000.0,
+      "n": 1452360,
+      "cl": 0.04119265452027321,
+      "cd": 0.0026586265303194523
+     }
+    ],
+    "ar_by_mach": [
+     {
+      "lo": -0.01,
+      "hi": 0.05,
+      "n": 636250,
+      "cl": 0.043792225420475006,
+      "cd": 0.003007344203069806
+     },
+     {
+      "lo": 0.05,
+      "hi": 0.15,
+      "n": 629490,
+      "cl": 0.044651344418525696,
+      "cd": 0.003229960333555937
+     },
+     {
+      "lo": 0.15,
+      "hi": 0.3,
+      "n": 616820,
+      "cl": 0.05028867349028587,
+      "cd": 0.004147345665842295
+     },
+     {
+      "lo": 0.3,
+      "hi": 0.51,
+      "n": 544984,
+      "cl": 0.053178559988737106,
+      "cd": 0.0044092838652431965
+     }
+    ]
+   },
+   "latency": {
+    "cpu_b1_1thread_ms": {
+     "median": 1.0608539450913668,
+     "p90": 1.103633688762784
+    },
+    "fused_cpp_b1_us": {
+     "full_median": 166.12489707767963,
+     "geom_cached_median": 131.6874986514449,
+     "max_abs_diff_vs_torch": 2.86102294921875e-06
+    },
+    "cpu_batched_us_per_polar": {
+     "bs": 512,
+     "us": 181.91852625477622
+    },
+    "mps_batched_us_per_polar": {
+     "bs": 1024,
+     "us": 31.932002730172822
+    }
+   },
+   "train": {
+    "epoch": 287,
+    "val_causal": {
+     "loss": 0.1995304711163044,
+     "cl": 0.04809797182679176,
+     "cd": 0.0037654198240488768,
+     "stall_cl": 0.054555993527173996,
+     "stall_cd": 0.006317174062132835
+    },
+    "variant": {
+     "id": 80,
+     "slug": "seq_transformer",
+     "name": "Baseline: FoilCORE front-end + 2-layer pre-LN Transformer encoder (PatchTST, patch length 1)"
+    }
+   }
+  },
+  "v81": {
+   "ckpt": "results/pod_runs/20260819_001018_v81/foilcore_best.pt",
+   "n_params": 11780,
+   "param_breakdown": {
+    "path": 416,
+    "geom_encoder": 96,
+    "mem_mix": 416,
+    "head": 66,
+    "profile_in": 672,
+    "polar_in": 192,
+    "bb_in": 264,
+    "backbone": 9640,
+    "bb_head": 18
+   },
+   "config": {
+    "d_model": 32,
+    "d_geom": 32,
+    "model_type": "seqbaseline",
+    "num_blocks": 2,
+    "block_mode": "all_alt",
+    "shared_qk_scalars": true,
+    "path_mode": "full",
+    "share_path": true,
+    "n_path_terms": 4,
+    "outer_layers": 0,
+    "dropout": 0.05,
+    "residual": true,
+    "use_causal_mask": false,
+    "decoder_hidden": 0,
+    "output_dims": 2,
+    "mlp_hidden": 32,
+    "n_heads": 2,
+    "le_xmax": 0.25,
+    "te_xmin": 0.75,
+    "draft_loss_weight": 0.25,
+    "n_geom_memories": 3,
+    "n_landmarks": 4,
+    "contour_bidirectional": true,
+    "contour_d_cond": 3,
+    "contour_log_a_init": "const",
+    "contour_mode": "ssm",
+    "directional_landmarks": false,
+    "landmark_mean": false,
+    "mem_log_a_init": -0.5,
+    "polar_mixer": "iir_clcd",
+    "iir_tau_init": "const",
+    "polar_in_clcd": true,
+    "polar_alpha_sinus": true,
+    "err_head_hidden": 16,
+    "err_head_mem_dim": 4,
+    "router_threshold": 0.5,
+    "use_stall_router": true,
+    "use_selective_ssm": true,
+    "use_local_kernel": true,
+    "use_err_head": false,
+    "profile_stations": 10,
+    "moe_experts": 0,
+    "geom_pool": "region3",
+    "softbin_k": 4,
+    "use_err_expert": false,
+    "err_expert_hidden": 16,
+    "seq_backbone": "tsmixer",
+    "bb_d": 8,
+    "bb_layers": 1,
+    "bb_t_max": 96,
+    "bb_inner": 24,
+    "bb_state": 8
+   },
+   "accuracy": {
+    "n_rows": 34043,
+    "n_points": 2427544,
+    "ar": {
+     "cl": 0.06105795502662659,
+     "cd": 0.004582439549267292,
+     "stall_cl": 0.06871919333934784,
+     "stall_cd": 0.007502113934606314,
+     "linear_cl": 0.056592002511024475,
+     "linear_cd": 0.0028804787434637547
+    },
+    "tf": {
+     "cl": 0.060542888939380646,
+     "cd": 0.004499450791627169,
+     "stall_cl": 0.06792854517698288,
+     "stall_cd": 0.00734383799135685,
+     "linear_cl": 0.056237585842609406,
+     "linear_cd": 0.002841377165168524
+    },
+    "seeded1": {
+     "cl": 0.06105795502662659,
+     "cd": 0.004582439549267292,
+     "stall_cl": 0.06871919333934784,
+     "stall_cd": 0.007502113934606314,
+     "linear_cl": 0.056592002511024475,
+     "linear_cd": 0.0028804787434637547
+    },
+    "draft": {
+     "cl": 0.094207763671875,
+     "cd": 0.011674796231091022
+    },
+    "ar_by_alpha": [
+     {
+      "lo": -20.0,
+      "hi": -12.0,
+      "n": 380602,
+      "cl": 0.06888321787118912,
+      "cd": 0.007407530210912228
+     },
+     {
+      "lo": -12.0,
+      "hi": -6.0,
+      "n": 419212,
+      "cl": 0.058129843324422836,
+      "cd": 0.004205294884741306
+     },
+     {
+      "lo": -6.0,
+      "hi": 0.0,
+      "n": 392415,
+      "cl": 0.045778196305036545,
+      "cd": 0.00197588955052197
+     },
+     {
+      "lo": 0.0,
+      "hi": 6.0,
+      "n": 359950,
+      "cl": 0.058933623135089874,
+      "cd": 0.00188032619189471
+     },
+     {
+      "lo": 6.0,
+      "hi": 12.0,
+      "n": 392893,
+      "cl": 0.0640745759010315,
+      "cd": 0.003473761025816202
+     },
+     {
+      "lo": 12.0,
+      "hi": 20.1,
+      "n": 463413,
+      "cl": 0.06802565604448318,
+      "cd": 0.007536572869867086
+     }
+    ],
+    "ar_by_re": [
+     {
+      "lo": 40000.0,
+      "hi": 100000.0,
+      "n": 111586,
+      "cl": 0.1202283501625061,
+      "cd": 0.01152981910854578
+     },
+     {
+      "lo": 100000.0,
+      "hi": 300000.0,
+      "n": 223263,
+      "cl": 0.09112424403429031,
+      "cd": 0.008008953183889389
+     },
+     {
+      "lo": 300000.0,
+      "hi": 1000000.0,
+      "n": 379132,
+      "cl": 0.05634624511003494,
+      "cd": 0.005372102838009596
+     },
+     {
+      "lo": 1000000.0,
+      "hi": 3000000.0,
+      "n": 261203,
+      "cl": 0.05677811801433563,
+      "cd": 0.0046289353631436825
+     },
+     {
+      "lo": 3000000.0,
+      "hi": 21000000.0,
+      "n": 1452360,
+      "cl": 0.05388961732387543,
+      "cd": 0.003307427978143096
+     }
+    ],
+    "ar_by_mach": [
+     {
+      "lo": -0.01,
+      "hi": 0.05,
+      "n": 636250,
+      "cl": 0.05429826304316521,
+      "cd": 0.0038620864506810904
+     },
+     {
+      "lo": 0.05,
+      "hi": 0.15,
+      "n": 629490,
+      "cl": 0.05578300356864929,
+      "cd": 0.004070378839969635
+     },
+     {
+      "lo": 0.15,
+      "hi": 0.3,
+      "n": 616820,
+      "cl": 0.0665263757109642,
+      "cd": 0.005165542010217905
+     },
+     {
+      "lo": 0.3,
+      "hi": 0.51,
+      "n": 544984,
+      "cl": 0.06885332614183426,
+      "cd": 0.005354926455765963
+     }
+    ]
+   },
+   "latency": {
+    "cpu_b1_1thread_ms": {
+     "median": 0.853583449497819,
+     "p90": 0.9319334756582975
+    },
+    "fused_cpp_b1_us": {
+     "full_median": 49.958936870098114,
+     "geom_cached_median": 32.00001083314419,
+     "max_abs_diff_vs_torch": 2.86102294921875e-06
+    },
+    "cpu_batched_us_per_polar": {
+     "bs": 256,
+     "us": 96.12452790861425
+    },
+    "mps_batched_us_per_polar": {
+     "bs": 512,
+     "us": 28.532604983411147
+    }
+   },
+   "train": {
+    "epoch": 231,
+    "val_causal": {
+     "loss": 0.23071706623715513,
+     "cl": 0.061235010623931885,
+     "cd": 0.004680944606661797,
+     "stall_cl": 0.06877721846103668,
+     "stall_cd": 0.007607484236359596
+    },
+    "variant": {
+     "id": 81,
+     "slug": "seq_tsmixer",
+     "name": "Baseline: FoilCORE front-end + TSMixer / TinyTimeMixer-style time-mixing MLP (T_max=96)"
+    }
+   }
+  },
+  "v82": {
+   "ckpt": "results/pod_runs/20260819_001018_v82/foilcore_best.pt",
+   "n_params": 5300,
+   "param_breakdown": {
+    "path": 416,
+    "geom_encoder": 96,
+    "mem_mix": 416,
+    "head": 66,
+    "profile_in": 672,
+    "polar_in": 192,
+    "bb_in": 528,
+    "backbone": 2880,
+    "bb_head": 34
+   },
+   "config": {
+    "d_model": 32,
+    "d_geom": 32,
+    "model_type": "seqbaseline",
+    "num_blocks": 2,
+    "block_mode": "all_alt",
+    "shared_qk_scalars": true,
+    "path_mode": "full",
+    "share_path": true,
+    "n_path_terms": 4,
+    "outer_layers": 0,
+    "dropout": 0.05,
+    "residual": true,
+    "use_causal_mask": false,
+    "decoder_hidden": 0,
+    "output_dims": 2,
+    "mlp_hidden": 32,
+    "n_heads": 2,
+    "le_xmax": 0.25,
+    "te_xmin": 0.75,
+    "draft_loss_weight": 0.25,
+    "n_geom_memories": 3,
+    "n_landmarks": 4,
+    "contour_bidirectional": true,
+    "contour_d_cond": 3,
+    "contour_log_a_init": "const",
+    "contour_mode": "ssm",
+    "directional_landmarks": false,
+    "landmark_mean": false,
+    "mem_log_a_init": -0.5,
+    "polar_mixer": "iir_clcd",
+    "iir_tau_init": "const",
+    "polar_in_clcd": true,
+    "polar_alpha_sinus": true,
+    "err_head_hidden": 16,
+    "err_head_mem_dim": 4,
+    "router_threshold": 0.5,
+    "use_stall_router": true,
+    "use_selective_ssm": true,
+    "use_local_kernel": true,
+    "use_err_head": false,
+    "profile_stations": 10,
+    "moe_experts": 0,
+    "geom_pool": "region3",
+    "softbin_k": 4,
+    "use_err_expert": false,
+    "err_expert_hidden": 16,
+    "seq_backbone": "mamba",
+    "bb_d": 16,
+    "bb_layers": 2,
+    "bb_t_max": 96,
+    "bb_inner": 16,
+    "bb_state": 8
+   },
+   "accuracy": {
+    "n_rows": 34043,
+    "n_points": 2427544,
+    "ar": {
+     "cl": 0.04933933541178703,
+     "cd": 0.0037635646294802427,
+     "stall_cl": 0.05560171976685524,
+     "stall_cd": 0.006259008310735226,
+     "linear_cl": 0.04568881914019585,
+     "linear_cd": 0.00230890023522079
+    },
+    "tf": {
+     "cl": 0.04947676882147789,
+     "cd": 0.003757420228794217,
+     "stall_cl": 0.055350739508867264,
+     "stall_cd": 0.006236335262656212,
+     "linear_cl": 0.04605266824364662,
+     "linear_cd": 0.0023123903665691614
+    },
+    "seeded1": {
+     "cl": 0.04933933541178703,
+     "cd": 0.0037635646294802427,
+     "stall_cl": 0.05560171976685524,
+     "stall_cd": 0.006259008310735226,
+     "linear_cl": 0.04568881914019585,
+     "linear_cd": 0.00230890023522079
+    },
+    "draft": {
+     "cl": 0.10403743386268616,
+     "cd": 0.012780801393091679
+    },
+    "ar_by_alpha": [
+     {
+      "lo": -20.0,
+      "hi": -12.0,
+      "n": 380602,
+      "cl": 0.05960922688245773,
+      "cd": 0.006692943628877401
+     },
+     {
+      "lo": -12.0,
+      "hi": -6.0,
+      "n": 419212,
+      "cl": 0.050812266767024994,
+      "cd": 0.0037394368555396795
+     },
+     {
+      "lo": -6.0,
+      "hi": 0.0,
+      "n": 392415,
+      "cl": 0.0393233485519886,
+      "cd": 0.0015180754708126187
+     },
+     {
+      "lo": 0.0,
+      "hi": 6.0,
+      "n": 359950,
+      "cl": 0.0455811470746994,
+      "cd": 0.001417157705873251
+     },
+     {
+      "lo": 6.0,
+      "hi": 12.0,
+      "n": 392893,
+      "cl": 0.04735963046550751,
+      "cd": 0.0025973659940063953
+     },
+     {
+      "lo": 12.0,
+      "hi": 20.1,
+      "n": 463413,
+      "cl": 0.051078323274850845,
+      "cd": 0.005770586896687746
+     }
+    ],
+    "ar_by_re": [
+     {
+      "lo": 40000.0,
+      "hi": 100000.0,
+      "n": 111586,
+      "cl": 0.09313173592090607,
+      "cd": 0.00869399681687355
+     },
+     {
+      "lo": 100000.0,
+      "hi": 300000.0,
+      "n": 223263,
+      "cl": 0.07268945127725601,
+      "cd": 0.006542252376675606
+     },
+     {
+      "lo": 300000.0,
+      "hi": 1000000.0,
+      "n": 379132,
+      "cl": 0.04798451438546181,
+      "cd": 0.004602116998285055
+     },
+     {
+      "lo": 1000000.0,
+      "hi": 3000000.0,
+      "n": 261203,
+      "cl": 0.04630868881940842,
+      "cd": 0.00382083747535944
+     },
+     {
+      "lo": 3000000.0,
+      "hi": 21000000.0,
+      "n": 1452360,
+      "cl": 0.04328397661447525,
+      "cd": 0.002728403313085437
+     }
+    ],
+    "ar_by_mach": [
+     {
+      "lo": -0.01,
+      "hi": 0.05,
+      "n": 636250,
+      "cl": 0.04487508907914162,
+      "cd": 0.0030603029299527407
+     },
+     {
+      "lo": 0.05,
+      "hi": 0.15,
+      "n": 629490,
+      "cl": 0.0457887277007103,
+      "cd": 0.0033081460278481245
+     },
+     {
+      "lo": 0.15,
+      "hi": 0.3,
+      "n": 616820,
+      "cl": 0.05240529030561447,
+      "cd": 0.004272819496691227
+     },
+     {
+      "lo": 0.3,
+      "hi": 0.51,
+      "n": 544984,
+      "cl": 0.055182281881570816,
+      "cd": 0.004534253850579262
+     }
+    ]
+   },
+   "latency": {
+    "cpu_b1_1thread_ms": {
+     "median": 1.4816875336691737,
+     "p90": 1.5867922222241757
+    },
+    "fused_cpp_b1_us": {
+     "full_median": 121.6039527207613,
+     "geom_cached_median": 103.52092795073986,
+     "max_abs_diff_vs_torch": 1.9073486328125e-06
+    },
+    "cpu_batched_us_per_polar": {
+     "bs": 256,
+     "us": 223.7895996131556
+    },
+    "mps_batched_us_per_polar": {
+     "bs": 1024,
+     "us": 46.86502280719651
+    }
+   },
+   "train": {
+    "epoch": 270,
+    "val_causal": {
+     "loss": 0.21010796857230804,
+     "cl": 0.04944059997797012,
+     "cd": 0.003855613525956869,
+     "stall_cl": 0.05582920461893082,
+     "stall_cd": 0.006391006521880627
+    },
+    "variant": {
+     "id": 82,
+     "slug": "seq_mamba",
+     "name": "Baseline: FoilCORE front-end + 2-layer minimal Mamba (S6) backbone"
+    }
+   }
+  }
+ }
+}

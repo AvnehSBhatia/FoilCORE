@@ -1,0 +1,24 @@
+% Shared packages for NeurIPS 2026 workshop copies. Load neurips_2026 and
+% \workshoptitle before inputting this file. Compile from paper/workshops/ with
+% TEXINPUTS=..: (see build.sh).
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{float}
+\graphicspath{{../figures/ts/}{figures/ts/}}
+\input{../tables/ts_numbers}
+\IfFileExists{../tables/ts_ko_macros.tex}{\input{../tables/ts_ko_macros}}{\newcommand{\KoBaseCl}{--}\newcommand{\KoBaseCd}{--}\newcommand{\KoTestBaseCl}{--}\newcommand{\KoTestBaseCd}{--}}
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+\setlength{\abovecaptionskip}{4pt}
+\setlength{\belowcaptionskip}{2pt}
+\author{Anonymous authors\\ Paper under double-blind review}

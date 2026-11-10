@@ -1,0 +1,17 @@
+\begin{tabular}{lrrrrrr}
+\toprule
+Training protocol & \multicolumn{2}{c}{ETTh1 oil temp.\ ($^\circ$C)} & \multicolumn{2}{c}{Beijing PM2.5 (log)} & \multicolumn{2}{c}{MIT-BIH lead II (mV)} \\
+ & stream & smooth & stream & smooth & stream & smooth \\
+\midrule
+label-leaking (sched.\ sampling) & 5.52 & 5.27 & 0.590 & 0.502 & 0.300 & 0.289 \\
+draft-only, causal & 5.19 & 5.30 & 0.489 & 0.515 & 0.229 & 0.226 \\
+draft-only, bidirectional & 5.26 & 5.30 & 0.600 & 0.499 & 0.257 & 0.233 \\
+draft-only, dual mask (ours) & 5.30 & 5.38 & 0.494 & 0.503 & 0.229 & 0.228 \\
+\midrule
+\multicolumn{7}{l}{\emph{Same, with a transformer corrector in place of ours:}} \\
+\quad label-leaking & 6.03 & 5.69 & 0.732 & 0.582 & 0.297 & 0.295 \\
+\quad draft-only, causal & 4.62 & 4.67 & 0.487 & 0.581 & 0.227 & 0.229 \\
+\quad draft-only, bidirectional & 4.67 & 4.07 & 0.628 & 0.494 & 0.246 & 0.220 \\
+\quad draft-only, dual mask & 4.70 & 4.78 & 0.492 & 0.497 & 0.223 & 0.220 \\
+\bottomrule
+\end{tabular}
